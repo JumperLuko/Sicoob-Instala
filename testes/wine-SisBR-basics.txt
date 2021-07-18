@@ -1,0 +1,24 @@
+# Local onde ficará os programas
+sudo mkdir /opt/wine/
+
+#& Criar .wine user e instalar AdobeAir ao criar usuário
+?gerar arquivo em /etc/profile.d/
+winecfg
+wine AdobeAIRInstaller.exe
+
+# Criar wine folder temporária
+sudo mkdir .wine-temp
+sudo WINEPREFIX=~/.wine-temp/ winecfg
+
+# Instalar Programas (SisBR no caso)
+sudo WINEPREFIX=~/.wine-temp/ wine AdobeAIRInstaller.exe 
+sudo WINEPREFIX=~/.wine-temp/ wine Sisbr20.exe 
+
+# Copiar instalação SisBR para local publico
+sudo cp -r ./.wine-temp/drive_c/Sisbr\ 2.0/ /opt/wine/
+
+# Permissão para todos editarem
+sudo chmod 777 -R Sisbr\ 2.0/
+
+## rodando SisBR em local publico (gera alguns erros sem premissões todas permissões concedidas)
+wine /opt/wine/Sisbr\ 2.0/Sisbr\ 2.0.exe

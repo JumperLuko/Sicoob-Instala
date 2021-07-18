@@ -1,0 +1,7 @@
+[Desktop Entry]
+Name=Sisbr 2.0
+Exec=env WINEPREFIX="/opt/wine" wine-stable C:\\\\windows\\\\command\\\\start.exe /Unix /opt/wine/dosdevices/c:/users/root/Start\\ Menu/Programs/Sisbr\\ 2.0.lnk
+Type=Application
+StartupNotify=true
+Icon=2702_Sisbr 2.0.0
+StartupWMClass=sisbr 2.0.exe

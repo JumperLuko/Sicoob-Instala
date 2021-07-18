@@ -1,0 +1,16 @@
+=== Itens ===
+
+- Primeira abertura do usuário exibir zorin-appearance
+
+# SisBR
+- Verificar instalação AdobeAIR ao iniciar usuário, e caso não tenha: informar o usuário e abrir janela de instalação
+- Instalador do SisBR
+- Verificar no desktop se existe instalação local do .wine o AdobeAIR, se não existir irá pedir para instalar, se existir somente executará
+- Arrumar icones do Desktop do SisBR
+
+# Gercoop
+- Instalador do Gercoob
+- Arrumar icones do Desktop do Gercoop
+
+- Tentar Citrix
+- Tentar Sicoob Empresarial
