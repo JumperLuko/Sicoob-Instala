@@ -7,10 +7,11 @@ sudo apt update
 sudo apt upgrade
 
 # Instalar pacotes básicos
+# obs: não terá -y, pois por segurança é para o administrador checar se os pacotes serão instalados sem quebrar algo. Estamos lidando com componente que deve ser sólido, o sistema, então a checagem é importante!
 # `sssd-ad sssd-tools reamd adcli` para instalar o AD
 # `samba e smbclient` são para realizar compartilhamento de arquivos na rede
 # `wine wine32:i386` é a camada de compatibilidade de apps Windows em 64b e 32b
-sudo apt install sssd-ad sssd-tools reamd adcli samba smbclient wine wine32:i386 -y
+sudo apt install sssd-ad sssd-tools reamd adcli samba smbclient wine wine32:i386
 
 # criar pasta de usuário automáticamente ao usuário entrar pelo AD
 sudo pam-auth-update --enable mkhomedir
