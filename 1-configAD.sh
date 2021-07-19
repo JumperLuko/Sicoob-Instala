@@ -17,4 +17,4 @@ echo "Verifique se está conectado ao AD"
 realm list sicoobsmo.local
 
 # Sair do AD (é uma anotação)
-#sudo realm leave <%AD Domain Name%>
+#sudo realm leave sicoobsmo.local
