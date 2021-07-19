@@ -1,0 +1,36 @@
+# Pacotes necessários no Ubuntu 20.04
+sudo apt install sssd-ad sssd-tools realmd adcli
+
+## Editar nome do PC e reiniciar
+sudo nano /etc/hostname && reboot
+
+# Encontrar AD
+realm discover sicoobsmo.local
+
+# Entrar no AD
+sudo realm join sicoobsmo.local --user=administrador
+
+## Se der erro verifique se a maquina existe no servidor do AD
+hostname -f
+
+# Verificar se está conectad no AD
+realm list sicoobsmo.local
+
+# criar pasta do usuário automaticamente
+sudo pam-auth-update --enable mkhomedir
+
+
+
+
+# Instalar wine e winetricks
+sudo apt install wine winetricks
+
+# Criar diretório do wine
+sudo WINEPREFIX=/opt/wine/ wine wineboot
+
+
+## criar diretório em 32b
+WINEPREFIX=~/.new32prefix WINEARCH="win32" wine wineboot
+
+## winecfg no diretório
+sudo WINEPREFIX=/opt/wine/ winecfg
