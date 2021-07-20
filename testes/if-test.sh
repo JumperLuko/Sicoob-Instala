@@ -1,6 +1,5 @@
 #!/bin/bash
 
-#| Mostrar sim ou não
 sim_nao() {
     while true; do
         read -p "$* [s/n]: " sn
@@ -11,18 +10,34 @@ sim_nao() {
         sim_ou_no="null"
     done
 }
-
-funcao1(){
-	sim_nao;if [ "$sim_ou_nao" == "nao" ];then
-        return
-    fi
-	printf "Retornou\n\n"
-}
-# funcao1
 sim_nao;if [ "$sim_ou_nao" == "nao" ];then
-	exit
+    echo "Não? Será aplicado mesmo assim :P";unset sim_ou_nao
+	echo $sim_ou_nao
 fi
-echo "não saiu"
+
+# #| Mostrar sim ou não
+# sim_nao() {
+#     while true; do
+#         read -p "$* [s/n]: " sn
+#         case $sn in
+#             [Ss]*) sim_ou_no="sim" && return 0  ;;  
+#             [Nn]*) printf "Cancelado\n\n" ; sim_ou_nao="nao" && return  1 ;;
+#         esac
+#         sim_ou_no="null"
+#     done
+# }
+
+# funcao1(){
+# 	sim_nao;if [ "$sim_ou_nao" == "nao" ];then
+#         return
+#     fi
+# 	printf "Retornou\n\n"
+# }
+# # funcao1
+# sim_nao;if [ "$sim_ou_nao" == "nao" ];then
+# 	exit
+# fi
+# echo "não saiu"
 
 
 
