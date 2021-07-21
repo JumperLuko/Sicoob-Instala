@@ -1,0 +1,3 @@
+#!/bin/bash
+
+#! Se não houver instalação informar o usuário e abrir arquivo do instalador do adobe. Também criar arquivo desktop para realizar instalação, assim que terminado apagar ele

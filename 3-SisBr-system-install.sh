@@ -1,3 +1,5 @@
+#!/bin/bash
+
 #| Mostrar sim ou não para funções
 sim_nao() {
     while true; do
@@ -107,6 +109,14 @@ else
     echo "Erro inesperado ao verificar instalação do SisBR"
 fi
 
+#! Copiar .desktop
+echo "Copiando arquivo .desktop"
+cp ./desktop/Sisbr_2.0.desktop /usr/share/applications/
+
+# Copiar icones para o sistema
+echo "Inserindo icones do programa no sistema"
+sudo cp ./desktop/hicolor/* /usr/share/icons/hicolor/
+
 # Permissão para todos editarem
 echo "fornecendo permissões para todos usarem a pasta od SisBR"
 sudo chmod 777 -R /opt/wine/drive_c/Sisbr\ 2.0/
@@ -117,3 +127,4 @@ fi
 sudo chmod 777 -R /opt/wine/drive_c/Sisbr\ 2.0/
 
 # SisBR irá atualizar e rodar automáticamente
+
