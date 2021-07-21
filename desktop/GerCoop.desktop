@@ -1,6 +1,6 @@
 [Desktop Entry]
 Name=GerCoop
-Exec=wine /opt/wine/GerCoop/GerCoop.exe 
+Exec=wine /opt/wine/drive_c/GerCoop/GerCoop.exe 
 Type=Application
 StartupNotify=true
 Icon=906A_GerCoop.0

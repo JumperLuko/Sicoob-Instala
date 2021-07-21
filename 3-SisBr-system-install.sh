@@ -111,7 +111,7 @@ fi
 
 #! Copiar .desktop
 echo "Copiando arquivo .desktop"
-cp ./desktop/Sisbr_2.0.desktop /usr/share/applications/
+sudo cp ./desktop/Sisbr_2.0.desktop /usr/share/applications/
 
 # Copiar icones para o sistema
 echo "Inserindo icones do programa no sistema"
