@@ -10,4 +10,4 @@ sudo cp 3-SisBr-all.sh /etc/profile.d/
 sudo chmod -x /etc/profile.d/3-SisBr-all.sh
 
 echo "Executando script de instalação"
-3-SisBr-system-install.sh
+./3-SisBr-system-install.sh
