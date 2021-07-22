@@ -26,4 +26,14 @@ jumperluko.github.io
 - Arrumar icones do Desktop do Gercoop
 
 - Tentar Citrix
-- Tentar Sicoob Empresarial
+
+# Sicoob empresarial 
+- comandos
+`javaws InstaladorSicoobnetEmpresarial.jnlp`
+`sudo chmod +x /usr/local/bin/sicoobnet.sh`
+- Experimentar versão java
+-links
+https://plus.diolinux.com.br/t/sicoob-empresarial-java/27557
+https://wikitux.wordpress.com/2019/10/05/instalando-o-sicoob-netempresarial-no-linux/
+https://empresarial.sicoobnet.com.br/instalador/#instalar
+https://www.google.com/search?q=sicooblinux

@@ -5,9 +5,9 @@
 #sudo mkdir /opt/sicoob/user/
 
 # Copia o arquivo do usuário
-echo "Copiando script do usuário que verifica instalação ao iniciar sessão"
+echo "Copiando script do usuário que verifica instalação ao iniciar sessão e arrumando a permissão"
 sudo cp 3-SisBr-all.sh /etc/profile.d/
-#! retirar permissão de executar dps
+sudo chmod -x /etc/profile.d/3-SisBr-all.sh
 
 echo "Executando script de instalação"
 3-SisBr-system-install.sh
