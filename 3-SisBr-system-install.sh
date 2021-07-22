@@ -28,7 +28,8 @@ SisBr=Sisbr20.exe
 # Verificando se existe o arquivo do adobeAIR na pasta local
 if [ -e $adobeAIR ] && ! [ -e /opt/wine/instaladores/$adobeAIR ]; then
 	echo "copiando instalador AdobeAir para pasta de instaladores"
-    sudo cp $adobeAIR /opt/wine/instaladores/
+	sudo cp $adobeAIR /opt/wine/instaladores/
+	sudo chmod 755 /opt/wine/instaladores/$adobeAIR
 elif [ -e $adobeAIR ] && [ -e /opt/wine/instaladores/$adobeAIR ]; then
     echo "Instalador $adobeAIR já existe em /opt/wine/instaladores/, deseja sobrescrever?"
     adobeAIRSobrescrever(){
@@ -37,6 +38,7 @@ elif [ -e $adobeAIR ] && [ -e /opt/wine/instaladores/$adobeAIR ]; then
         fi
         echo "copiando instalador AdobeAir para pasta de instaladores"
         sudo cp $adobeAIR /opt/wine/instaladores/
+        sudo chmod 755 /opt/wine/instaladores/$adobeAIR
     }
     adobeAIRSobrescrever
 elif ! [ -e $adobeAIR ] && [ -e /opt/wine/instaladores/$adobeAIR ]; then
@@ -59,7 +61,8 @@ fi
 # Verificando se existe o arquivo do SisBr na pasta local
 if [ -e $SisBr ] && ! [ -e /opt/wine/instaladores/$SisBr ]; then
 	echo "copiando instalador SisBr para pasta de instaladores"
-    sudo cp $SisBr /opt/wine/instaladores/
+	sudo cp $SisBr /opt/wine/instaladores/
+	sudo chmod 755 /opt/wine/instaladores/$SisBr
 elif [ -e $SisBr ] && [ -e /opt/wine/instaladores/$SisBr ]; then
     echo "Instalador $SisBr já existe em /opt/wine/instaladores/, deseja sobrescrever?"
     SisBrSobrescrever(){
@@ -68,6 +71,7 @@ elif [ -e $SisBr ] && [ -e /opt/wine/instaladores/$SisBr ]; then
         fi
         echo "copiando instalador SisBr para pasta de instaladores"
         sudo cp $SisBr /opt/wine/instaladores/
+        sudo chmod 755 /opt/wine/instaladores/$SisBr
     }
     SisBrSobrescrever
 elif ! [ -e $SisBr ] && [ -e /opt/wine/instaladores/$SisBr ]; then

@@ -11,7 +11,8 @@ sudo apt upgrade
 # `sssd-ad sssd-tools reamd adcli` para instalar o AD
 # `samba e smbclient` são para realizar compartilhamento de arquivos na rede
 # `wine wine32:i386` é a camada de compatibilidade de apps Windows em 64b e 32b
-sudo apt install sssd-ad sssd-tools realmd adcli samba smbclient wine wine32:i386
+# `x11vnc` para acessar via vnc o desktop
+sudo apt install sssd-ad sssd-tools realmd adcli samba smbclient wine wine32:i386 x11vnc
 
 # Descomente isto caso queira reinstalar o Desktop
 #sudo apt install zorin-os-standard
