@@ -119,7 +119,7 @@ sudo cp ./desktop/Sisbr_2.0.desktop /usr/share/applications/
 
 # Copiar icones para o sistema
 echo "Inserindo icones do programa no sistema"
-sudo cp ./desktop/hicolor/* /usr/share/icons/hicolor/
+sudo cp -r ./desktop/hicolor/* /usr/share/icons/hicolor/
 
 # Permissão para todos editarem
 echo "fornecendo permissões para todos usarem a pasta od SisBR"

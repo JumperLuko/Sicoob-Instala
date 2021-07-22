@@ -3,5 +3,5 @@ Name=Sisbr 2.0
 Exec=wine /opt/wine/drive_c/Sisbr\ 2.0/Sisbr\ 2.0.exe
 Type=Application
 StartupNotify=true
-Icon=2702_Sisbr 2.0.0
+Icon=2702_Sisbr_2.0.0
 StartupWMClass=sisbr 2.0.exe
