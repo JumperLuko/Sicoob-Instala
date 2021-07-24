@@ -78,11 +78,13 @@ echo "Inserindo icones do programa no sistema"
 sudo cp -r ./desktop/hicolor/* /usr/share/icons/hicolor/
 
 # Permissão para todos editarem
-echo "fornecendo permissões para todos usarem a pasta od Gercoop"
+echo "fornecendo permissões para todos usarem a pasta do Gercoop"
 sudo chmod 777 -R /opt/wine/drive_c/GerCoop/
 
 # Atualizando Gercoop
-echo "Assim que o Gercoop tiver atualizado, por favor dar sim para dar as permissões novamente"
+#! Preciso arranjar forma de criar uma caminho para rodar o gercoop (cd sem usar terminal, pelo .desktop), para ele não gerar arquivos de monte onde for rodar
+#echo "Assim que o Gercoop tiver atualizado, por favor dar sim para dar as permissões novamente"
+echo "Por favor não atualizar, vai gerar arquivos locais"
 sudo WINEPREFIX=/opt/wine/ wine /opt/wine/drive_c/GerCoop/GerCoop.exe 
 sim_nao;if [ "$sim_ou_nao" == "nao" ];then
     unset sim_ou_nao; echo "Não? Será aplicado mesmo assim :P"

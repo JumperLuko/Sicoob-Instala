@@ -122,7 +122,7 @@ echo "Inserindo icones do programa no sistema"
 sudo cp -r ./desktop/hicolor/* /usr/share/icons/hicolor/
 
 # Permissão para todos editarem
-echo "fornecendo permissões para todos usarem a pasta od SisBR"
+echo "fornecendo permissões para todos usarem a pasta do SisBR"
 sudo chmod 777 -R /opt/wine/drive_c/Sisbr\ 2.0/
 echo "Assim que o SisBR tiver atualizado, por favor dar sim para dar as permissões novamente"
 sim_nao;if [ "$sim_ou_nao" == "nao" ];then
