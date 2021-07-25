@@ -1,5 +1,17 @@
 #!/bin/bash
 
+#| Mostrar sim ou não para funções
+sim_nao() {
+    while true; do
+        read -p "$* [s/n]: " sn
+        case $sn in
+            [Ss]*) sim_ou_no="sim" && return 0  ;;  
+            [Nn]*) printf "Cancelado\n\n" ; sim_ou_nao="nao" && return  1 ;;
+        esac
+        sim_ou_no="null"
+    done
+}
+
 #! Tenho achar forma de verificar se o Firewall está bloqueando os repositórios e trocar automáticamente, ou abrir a janela para o administrador mudar os repositórios (e tbm infomar ele o que deve fazer)
 
 # Atualizar corretamente os repositórios
@@ -23,11 +35,17 @@ sudo pam-auth-update --enable mkhomedir
 # Configurar hostname
 #! Colocar um prompt para confirmar o reboot com sim e não
 echo "Por favor defina o nome da maquina, no bloco de notas que abrirá"
-sleep 10
+sleep 5
 sudo gedit /etc/hostname
-echo "O computador irá REINICIAR em 60 segundos automáticamente"
-echo ""
-echo "Será reiniciado para aplicar a configuração do novo nome da maquina, se fechar este terminal o reboot será cancelado"
-sleep 60
-reboot
 
+# reboot?
+echo "Deseja reiniciar?"
+echo "é recomendado para implementar o nome da maquina"
+sim_nao;if [ "$sim_ou_nao" == "sim" ];then
+    unset sim_ou_nao;echo "Reiniciando...";reboot
+elif [ "$sim_ou_nao" == "nao" ];then
+    unset sim_ou_nao;
+    echo "Sem reboot"
+fi
+
+echo "Configuração finalizada!"
