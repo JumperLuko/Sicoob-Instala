@@ -1,0 +1,12 @@
+
+#! Verificar implementação, arquivo bruto
+
+# Verifica se tem pasta gercoop, senão vai adentrar nela
+if ! [ -e $home/gercoop/ ]; then
+	mkdir $home/gercoop/
+fi
+
+#! Verificar como rodar em local especifico, já que não vai rodar em terminal
+
+# rodar programa
+wine /opt/wine/drive_c/GerCoop/GerCoop.exe 

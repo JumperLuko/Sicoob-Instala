@@ -17,6 +17,13 @@ echo "Criando pasta do wine e instaladores"
 sudo mkdir /opt/wine/
 sudo mkdir /opt/wine/instaladores/
 
+#! Implementar executavel que rode em local expecifico
+#sudo mkdir /opt/sicoob/
+#sudo mkdir /opt/sicoob/desktop/
+#sudo mkdir /opt/sicoob/user/
+#sudo mkdir /opt/sicoob/system/
+#sudo cp ./desktop/Gercoop.sh /opt/sicoob/desktop/
+
 # Gerando firetórios do wine
 echo "Gerando diretórios do wine em /opt/wine/"
 sudo WINEPREFIX=/opt/wine/ wine wineboot

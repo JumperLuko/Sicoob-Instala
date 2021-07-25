@@ -6,4 +6,4 @@ StartupNotify=true
 Icon=906A_GerCoop.0
 StartupWMClass=Gercoop
 Keywords=Sicoob;cooperativa;
-#Path=$HOME/gercoop
+Path=./Downloads
