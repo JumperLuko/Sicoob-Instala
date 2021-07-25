@@ -4,4 +4,5 @@ Exec=wine /opt/wine/drive_c/Sisbr\ 2.0/Sisbr\ 2.0.exe
 Type=Application
 StartupNotify=true
 Icon=2702_Sisbr_2.0.0
-StartupWMClass=sisbr 2.0.exe
+StartupWMClass=SisBr 2.0
+Keywords=Sicoob;cooperativa;
