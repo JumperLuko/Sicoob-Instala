@@ -13,6 +13,7 @@ sim_nao() {
 }
 
 # Local onde ficará os programas e instaladores
+runFolder="/opt/sicoob/wine/run/"
 echo "Criando pasta do wine e instaladores"
 sudo mkdir /opt/wine/
 sudo mkdir /opt/wine/instaladores/
