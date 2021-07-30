@@ -1,15 +1,6 @@
 Código escrito por JumperLuko
 jumperluko.github.io
 
-=== Identificação dos pacotes ===
-# Niveis
-0 -> Instalações basicas e primárias para o funcionamento do sistema (costumam ter alta criticidade de quebrar gravemente o sistema)
-1 -> Configurações do sistema (costumam ter baixa criticidade de quebrar o sistema)
-2 -> Instalações de programas comuns (as vezes podem apresentar algum problema)
-3 -> Instalação de pacote Wine (raramente afetam o sistema, mas afetam os programs que rodam com wine)
-4 -> Instalação de pacotes Isolados, tais como, Flatpak, Snap, Appimage ou SH sem permissão elevada (costumam não alterar o sistema)
-
-
 === Itens ===
 
 - Primeira abertura do usuário exibir zorin-appearance
@@ -17,14 +8,14 @@ jumperluko.github.io
 - configurar o VNC ao iniciar sessão do usuário, e terá que continuar rodando após a primeira sessão 
 
 # SisBR
-- Verificar instalação AdobeAIR ao iniciar usuário, e caso não tenha: informar o usuário e abrir janela de instalação
-- Instalador do SisBR
-- Verificar no desktop se existe instalação local do .wine o AdobeAIR, se não existir irá pedir para instalar, se existir somente executará
-- Arrumar icones do Desktop do SisBR
+OK - Verificar instalação AdobeAIR ao iniciar usuário, e caso não tenha: informar o usuário e abrir janela de instalação
+OK - Instalador do SisBR
+OK - Verificar no desktop se existe instalação local do .wine o AdobeAIR, se não existir irá pedir para instalar, se existir somente executará
+OK - Arrumar icones do Desktop do SisBR
 
 # Gercoop
-- Instalador do Gercoob
-- Arrumar icones do Desktop do Gercoop
+OK - Instalador do Gercoob
+OK - Arrumar icones do Desktop do Gercoop
 
 - Tentar Citrix
 

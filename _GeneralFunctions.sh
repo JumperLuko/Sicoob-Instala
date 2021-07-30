@@ -12,25 +12,3 @@ sim_nao() {
         sim_ou_no="null"
     done
 }
-
-# Verifica se há arquivo e executa
-verificaExisteArquivo(){
-    if [ -e "$1" ]; then
-        $2
-    elif ! [ -e "$1" ]; then
-        $3
-    else
-        $4
-    fi
-}
-
-# Verifica se não há arquivo e executa
-verificaNaoExisteArquivo(){
-    if ! [ -e "$1" ]; then
-        $2
-    elif [ -e "$1" ]; then
-        $3
-    else
-        $4
-    fi
-}

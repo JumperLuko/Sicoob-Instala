@@ -1,9 +1,8 @@
 [Desktop Entry]
 Name=GerCoop
-Exec=wine /opt/wine/drive_c/GerCoop/GerCoop.exe 
+Exec=/opt/sicoob/run/Gercoop.sh
 Type=Application
 StartupNotify=true
 Icon=906A_GerCoop.0
 StartupWMClass=Gercoop
 Keywords=Sicoob;cooperativa;
-Path=./Downloads

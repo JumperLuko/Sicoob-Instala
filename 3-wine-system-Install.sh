@@ -1,18 +1,19 @@
 #!/bin/bash
 
 # Dependendencias
-./_GeneralFunctions.sh
+source ./_GeneralFunctions.sh
 
 # Diretórios
 sicoobFolder="/opt/sicoob/"
 wineFolder="/opt/sicoob/wine/"
-instaladoresFolder="/opt/sicoob/wine/instaladores/"
-runFolder="/opt/sicoob/wine/run/"
+instaladoresFolder="/opt/sicoob/instaladores/"
+runFolder="/opt/sicoob/run/"
 
 # Criando diretórios
 sudo mkdir "$sicoobFolder"
 sudo mkdir "$wineFolder"
 sudo mkdir "$instaladoresFolder"
+sudo mkdir "$runFolder"
 
 # Gerando diretórios do wine
 echo "Gerando diretórios do wine em $wineFolder"
@@ -45,4 +46,28 @@ verificaInstalador(){
         echo "O script continuará em 15 segundos"
         sleep 15
     fi
+}
+
+# Verifica se ta instalado e se não, então instala
+verificaInstalaWine(){
+    if ! [ -e "$wineFolder""$1" ]; then
+        echo "Instalando $2" ;
+        sudo WINEPREFIX="$wineFolder" wine "$instaladoresFolder$2"
+    elif [ -e "$wineFolder""$1" ]; then
+        echo "Já existe instalação do $2, pulando instalação"
+    else
+        echo "Erro inesperado ao verificar instalação do $2"
+    fi
+}
+
+# Permissão para todos editarem
+addPerm777(){
+    echo "fornecendo permissões para todos usarem a pasta do $2"
+    sudo chmod 777 -R "$1"
+    (sleep 30 ; sudo chmod 777 -R "$1") &
+    echo "Assim que o $2 tiver atualizado, por favor dar sim para dar as permissões novamente"
+    sim_nao;if [ "$sim_ou_nao" == "nao" ];then
+        unset sim_ou_nao; echo "Não? Será aplicado mesmo assim :P"
+    fi
+    sudo chmod 777 -R /opt/sicoob/wine/drive_c/Sisbr\ 2.0/
 }

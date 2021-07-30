@@ -1,7 +1,7 @@
 #!/bin/bash
 
 homeGercoop="$home/.local/share/gercoop/"
-runGercoop(){ (cd $home/.local/share/gercoop/; wine /opt/wine/drive_c/GerCoop/GerCoop.exe) }
+runGercoop(){ (cd "$home/.local/share/gercoop/"; wine "/opt/sicoob/wine/drive_c/GerCoop/GerCoop.exe") }
 
 # Executa na pasta do Gercoop, se não houve, criará
 if [ -d "$homeGercoop" ]; then

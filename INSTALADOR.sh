@@ -1,4 +1,5 @@
 #!/bin/bash
+# Código feito por Jumper Luko <jumper.luko@gmail.com>
 
 # Fornecendo permissão de executar em todos sh
 chmod +x ./*.sh
@@ -10,7 +11,7 @@ echo "0- Realizar todas operações comuns na sequencia (1,2,3,4)"
 echo "1- Instalar pacotes e configurar o o basico no PC (IMPORTANTE)"
 echo "2- Configurar AD"
 echo "3- Instalar SisBR"
-echo "4- Instalar Gercoop (em testes)"
+echo "4- Instalar Gercoop"
 
 read -p "Digite o numero da opção que deseja: " opcao
 
