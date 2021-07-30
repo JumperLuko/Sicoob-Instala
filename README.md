@@ -1,8 +1,8 @@
 # Sistema de compatibilidade e configuração automátizado de sistema Linux para Sicoob
 
 - Configura, instala pacotes e atualiza o sistema
-- (incompleto) Compatibiliza programas Windows (wine)
-- (futuramente) Executa script de verificação ao iniciar usuário
+- Compatibiliza programas Windows (wine)
+- Executa script de verificação ao iniciar usuário
 
 ## Identificação dos pacotes
 ### Niveis
