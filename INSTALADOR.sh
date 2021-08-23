@@ -12,6 +12,7 @@ echo "1- Instalar pacotes e configurar o o basico no PC (IMPORTANTE)"
 echo "2- Configurar AD"
 echo "3- Instalar SisBR"
 echo "4- Instalar Gercoop"
+echo "... VNC e caixa em desenvolvimento"
 
 read -p "Digite o numero da opção que deseja: " opcao
 
