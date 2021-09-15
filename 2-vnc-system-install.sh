@@ -14,7 +14,7 @@ sudo cp profile.d/x11vnc-user.sh /etc/profile.d/
 # Iniciar com sistema
 #! Arquivo de inicialização não funciona pois o usuário guess está dando erro
 #echo "Configurando VNC para iniciar com sistema" 
-#sudo cp x11vnc-sicoob.service /etc/systemd/system/
+#sudo cp services/x11vnc-sicoob.service /etc/systemd/system/
 #sudo systemctl enable x11vnc-sicoob
 #sudo systemctl start x11vnc-sicoob
 

@@ -7,10 +7,10 @@ jumperluko.github.io
 - Configurações automáticas de compartilhamento de pasta na rede via Samba
 
 # VNC
-- configurar o VNC ao iniciar sessão do usuário, e terá que continuar rodando após a primeira sessão 
+OK - configurar o VNC ao iniciar sessão do usuário, e terá que continuar rodando após a primeira sessão 
 - VNC que rode ao trocar de usuário
 - Qual a forma padrão de rodar VNC ao iniciar sistema?
-- Onde armazenar arquivo de senha VNC?
+OK - Onde armazenar arquivo de senha VNC?
 https://wiki.archlinux.org/title/X11vnc
 
 # SisBR
