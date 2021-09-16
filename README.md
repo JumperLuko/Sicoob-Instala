@@ -2,11 +2,11 @@
 
 - Configura, instala pacotes e atualiza o sistema
 - Compatibiliza programas Windows (wine)
-- Executa script de verificação ao iniciar usuário
+- Implementa scripts de verificação e execução ao iniciar usuário
 
 ## Identificação dos pacotes
 ### Niveis
-0. Instalações basicas e primárias para o funcionamento do sistema (costumam ter alta criticidade de quebrar gravemente o sistema)
+0. Instalações basicas e primárias para o funcionamento do sistema (costumam ter alta criticidade de quebrar o sistema)
 
 1. Configurações do sistema (costumam ter baixa criticidade de quebrar o sistema)
 
