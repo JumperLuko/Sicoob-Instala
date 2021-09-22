@@ -1,5 +1,7 @@
 #!/bin/bash
 
+#! Se não houver instalação informar o usuário e abrir arquivo do instalador do adobe. Também criar arquivo desktop para realizar instalação, assim que terminado apagar ele
+
 # Gerar repositório do wine
 #! Depois isso será movimentado para uma verificação geral, não só do SisBR
 #sleep 10
