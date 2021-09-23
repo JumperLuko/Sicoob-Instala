@@ -6,6 +6,10 @@ jumperluko.github.io
 - Primeira abertura do usuário exibir zorin-appearance
 - Configurações automáticas de compartilhamento de pasta na rede via Samba
 
+# Teams
+- Tem como automatizar a instalação?
+https://www.microsoft.com/en-us/microsoft-teams/download-app#desktopAppDownloadregion
+
 # VNC
 OK - configurar o VNC ao iniciar sessão do usuário, e terá que continuar rodando após a primeira sessão 
 - VNC que rode ao trocar de usuário
