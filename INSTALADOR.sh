@@ -13,6 +13,7 @@ echo "2- Configurar AD"
 echo "3- Instalar SisBR"
 echo "4- Instalar Gercoop"
 echo "5- Configurar VNC"
+echo "6- Caixa"
 echo "... caixa em desenvolvimento"
 
 read -p "Digite o numero da opção que deseja: " opcao
@@ -25,6 +26,7 @@ while true; do
             ./3-SisBr-all.sh
             ./3-Gercoop-system-install.sh
             ./2-vnc-system-install.sh
+            ./3-Caixa.sh
             break;;
         1) 
             ./01-basicsPackages_OS+basicConfig.sh
@@ -40,6 +42,9 @@ while true; do
             break;;
         5)
             ./2-vnc-system-install.sh
+            break;;
+        6)
+            ./3-Caixa.sh
             break;;
         "sair")
             echo "saindo"
