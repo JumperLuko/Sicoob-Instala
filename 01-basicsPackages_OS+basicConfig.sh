@@ -24,10 +24,17 @@ sudo apt upgrade
 # `samba e smbclient` são para realizar compartilhamento de arquivos na rede
 # `wine wine32:i386` é a camada de compatibilidade de apps Windows em 64b e 32b
 # `x11vnc` para acessar via vnc o desktop
-sudo apt install sssd-ad sssd-tools realmd adcli samba smbclient wine wine32:i386 x11vnc
+sudo apt install sssd-ad sssd-tools realmd adcli samba smbclient wine wine32:i386 x11vnc git git-gui
 
 # Descomente isto caso queira reinstalar o Desktop
 #sudo apt install zorin-os-standard
+
+# WineHq atualizado para Ubuntu 20.04 based
+sudo dpkg --add-architecture i386 
+wget -nc https://dl.winehq.org/wine-builds/winehq.key
+sudo apt-key add winehq.key
+sudo add-apt-repository 'deb https://dl.winehq.org/wine-builds/ubuntu/ focal main' -u
+sudo apt install --install-recommends winehq-stable
 
 # criar pasta de usuário automáticamente ao usuário entrar pelo AD
 sudo pam-auth-update --enable mkhomedir
