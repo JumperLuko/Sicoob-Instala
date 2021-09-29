@@ -1,6 +1,9 @@
 #!/bin/bash
 # Código feito por Jumper Luko <jumper.luko@gmail.com>
 
+timestamp=$(date +%Y-%m-%d_%H-%M-%S)
+echo "Instalador: $timestamp" >> $HOME/Downloads/SicoobInstalado.log
+
 # Fornecendo permissão de executar em todos sh
 chmod +x ./*.sh
 

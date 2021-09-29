@@ -1,8 +1,5 @@
 #!/bin/bash
 
-timestamp=$(date +%Y-%m-%d_%H-%M-%S)
-echo "wine-system-install: $timestamp" >> $HOME/Downloads/SicoobInstalado.log
-
 # Dependendencias
 source ./_GeneralFunctions.sh
 
@@ -13,15 +10,14 @@ instaladoresFolder="/opt/sicoob/instaladores/"
 runFolder="/opt/sicoob/run/"
 
 # Criando diretórios
-echo "Gerando pastas"
-sudo mkdir "$sicoobFolder" 2>> $HOME/Downloads/SicoobInstalado.log
-sudo mkdir "$wineFolder" 2>> $HOME/Downloads/SicoobInstalado.log
-sudo mkdir "$instaladoresFolder" 2>> $HOME/Downloads/SicoobInstalado.log
-sudo mkdir "$runFolder" 2>> $HOME/Downloads/SicoobInstalado.log
+sudo mkdir "$sicoobFolder"
+sudo mkdir "$wineFolder"
+sudo mkdir "$instaladoresFolder"
+sudo mkdir "$runFolder"
 
 # Gerando diretórios do wine
 echo "Gerando diretórios do wine em $wineFolder"
-sudo WINEPREFIX="$wineFolder" wine wineboot 2>> $HOME/Downloads/SicoobInstalado.log
+sudo WINEPREFIX="$wineFolder" wine wineboot
 
 # Verificando se existe o arquivo do instalador na pasta local ou no sistema
 verificaInstalador(){
@@ -37,8 +33,8 @@ verificaInstalador(){
             sudo chmod 755 "$instaladoresFolder$1"
         fi
     elif ! [ -e "$1" ] && [ -e "$instaladoresFolder$1" ]; then
-        echo -e "\n\nNão existe instalador com nome $1 nesta pasta, porém existe no sistema e será usada esta"
-        echo -e "\nDeseja continuar?"
+        echo "Não existe instalador com nome $1 nesta pasta, porém existe no sistema e será usada esta"
+        echo "deseja continuar?"
         sim_nao;if [ "$sim_ou_nao" == "nao" ];then exit; fi
     elif ! [ -e "$1" ] && ! [ -e "$instaladoresFolder$1" ]; then
         echo "não existe instaladores do $1, por favor jogue um arquivo nesta pasta com nome $1"
@@ -56,12 +52,9 @@ verificaInstalador(){
 verificaInstalaWine(){
     if ! [ -e "$wineFolder""$1" ]; then
         echo "Instalando $2" ;
-        sudo WINEPREFIX="$wineFolder" wine "$instaladoresFolder$2" 2>> $HOME/Downloads/SicoobInstalado.log
+        sudo WINEPREFIX="$wineFolder" wine uninstaller
     elif [ -e "$wineFolder""$1" ]; then
-        echo "Já existe instalação do $2, cancelar instalação?"
-        sim_nao;if [ "$sim_ou_nao" == "nao" ]; then
-            sudo WINEPREFIX="$wineFolder" wine "$instaladoresFolder$2" 2>> $HOME/Downloads/SicoobInstalado.log
-        fi
+        echo "Já existe instalação do $2, pulando instalação"
     else
         echo "Erro inesperado ao verificar instalação do $2"
     fi
