@@ -35,11 +35,9 @@ verificaInstalador(){
             echo "copiando instalador $1 para pasta de instaladores"
             sudo cp "$1" "$instaladoresFolder"
             sudo chmod 755 "$instaladoresFolder$1"
-        fi
+        fi;unset sim_ou_nao
     elif ! [ -e "$1" ] && [ -e "$instaladoresFolder$1" ]; then
         echo -e "\n\nNão existe instalador com nome $1 nesta pasta, porém existe no sistema e será usada esta"
-        echo -e "\nDeseja continuar?"
-        sim_nao;if [ "$sim_ou_nao" == "nao" ];then exit; fi
     elif ! [ -e "$1" ] && ! [ -e "$instaladoresFolder$1" ]; then
         echo "não existe instaladores do $1, por favor jogue um arquivo nesta pasta com nome $1"
         echo "este arquivo encerrará a execução"
@@ -61,7 +59,7 @@ verificaInstalaWine(){
         echo "Já existe instalação do $2, cancelar instalação?"
         sim_nao;if [ "$sim_ou_nao" == "nao" ]; then
             sudo WINEPREFIX="$wineFolder" wine "$instaladoresFolder$2" 2>> $HOME/Downloads/SicoobInstalado.log
-        fi
+        fi;unset sim_ou_nao
     else
         echo "Erro inesperado ao verificar instalação do $2"
     fi
@@ -74,7 +72,7 @@ addPerm777(){
     (sleep 30 ; sudo chmod 777 -R "$1") &
     echo "Assim que o $2 tiver atualizado, por favor dar sim para dar as permissões novamente"
     sim_nao;if [ "$sim_ou_nao" == "nao" ];then
-        unset sim_ou_nao; echo "Não? Será aplicado mesmo assim :P"
-    fi
+        echo "Não? Será aplicado mesmo assim :P"
+    fi;unset sim_ou_nao
     sudo chmod 777 -R /opt/sicoob/wine/drive_c/Sisbr\ 2.0/
 }
