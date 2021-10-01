@@ -12,3 +12,15 @@ sim_nao() {
         sim_ou_no="null"
     done
 }
+
+sim_nao_echo() {
+    echo "S para Sim"
+    echo "N para Negar instalação"
+    echo "C para Cancelar e sair deste programa"
+}
+
+sim_nao_echo_editar() {
+    echo "S para Sim, $1"
+    echo "N para Negar, $2"
+    echo "C para Cancelar, $3"
+}

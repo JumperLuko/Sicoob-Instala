@@ -1,4 +1,5 @@
-# Sistema de compatibilidade e configuração automátizado de sistema Linux para Sicoob
+# Sicoob Instala
+Programa para instalação, configuração e compatibilidade automátizada de sistemas Linux baseados no Ubuntu para Sicoob
 
 - Configura, instala pacotes e atualiza o sistema
 - Compatibiliza programas Windows (wine)
