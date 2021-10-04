@@ -1,5 +1,14 @@
 #!/bin/bash
 
+# Verificar caminhos das dependencias
+if [ "$scriptsDir" != "" ] && [ -e "./scripts/" ];then
+    scriptsDir=./scripts
+    relativeDir=.
+elif [ "$scriptsDir" != "" ];then
+    scriptsDir=.
+    relativeDir=..
+fi
+
 # Manual
 #! https://java.com/en/download/help/linux_install.html
 
@@ -24,5 +33,5 @@ sudo chmod +777 /opt/SicoobTerminal
 
 # instalar java
 #? usar Sudo ? testar!
-$javaPWD/bin/java -jar ./Plataforma_Caixa/Setup.jar
+(cd Plataforma_Caixa && $javaPWD/bin/java -jar $relativeDir/Plataforma_Caixa/Setup.jar)
 

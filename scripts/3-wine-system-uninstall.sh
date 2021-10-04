@@ -1,7 +1,16 @@
 #!/bin/bash
 
+# Verificar caminhos das dependencias
+if [ "$scriptsDir" == "" ] && [ -e "./scripts/" ];then
+    scriptsDir=./scripts
+    relativeDir=.
+elif [ "$scriptsDir" == "" ];then
+    scriptsDir=.
+    relativeDir=..
+fi
+
 # Dependendencias
-source ./_GeneralFunctions.sh
+source $scriptsDir/_GeneralFunctions.sh
 
 # Diretórios
 sicoobFolder="/opt/sicoob/"

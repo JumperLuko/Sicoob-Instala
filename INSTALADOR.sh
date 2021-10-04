@@ -1,11 +1,14 @@
 #!/bin/bash
 # Código feito por Jumper Luko <jumper.luko@gmail.com>
 
+# Carimbar arquivo de log
 timestamp=$(date +%Y-%m-%d_%H-%M-%S)
-echo "Instalador: $timestamp" >> $HOME/Downloads/SicoobInstalado.log
+echo -e "\n\nInstalador: $timestamp" >> $HOME/Downloads/SicoobInstalado.log
+
+scriptsDir=./scripts
 
 # Fornecendo permissão de executar em todos sh
-chmod +x ./*.sh
+chmod +x $scriptsDir/*.sh
 
 echo -e "Bem vindo ao Sicoob Instala\n\n" 
 echo -e "Digite o numero da opção que deseja\n"
@@ -24,30 +27,30 @@ read -p "Digite o numero da opção que deseja: " opcao
 while true; do
     case $opcao in
         0) 
-            ./01-basicsPackages_OS+basicConfig.sh
-            ./1-configAD.sh
-            ./3-SisBr-all.sh
-            ./3-Gercoop-system-install.sh
-            ./2-vnc-system-install.sh
-            ./3-Caixa.sh
+            $scriptsDir/01-basicsPackages_OS+basicConfig.sh
+            $scriptsDir/1-configAD.sh
+            $scriptsDir/3-SisBr-all.sh
+            $scriptsDir/3-Gercoop-system-install.sh
+            $scriptsDir/2-vnc-system-install.sh
+            $scriptsDir/3-Caixa.sh
             break;;
         1) 
-            ./01-basicsPackages_OS+basicConfig.sh
+            $scriptsDir/01-basicsPackages_OS+basicConfig.sh
             break;;
         2)
-            ./1-configAD.sh
+            $scriptsDir/1-configAD.sh
             break;;
         3)
-            ./3-SisBr-all.sh
+            $scriptsDir/3-SisBr-all.sh
             break;;
     	4)
-            ./3-Gercoop-system-install.sh
+            $scriptsDir/3-Gercoop-system-install.sh
             break;;
         5)
-            ./2-vnc-system-install.sh
+            $scriptsDir/2-vnc-system-install.sh
             break;;
         6)
-            ./3-Caixa.sh
+            $scriptsDir/3-Caixa.sh
             break;;
         "sair")
             echo "saindo"

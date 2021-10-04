@@ -1,7 +1,16 @@
 #!/bin/bash
 
+# Verificar caminhos das dependencias
+if [ "$scriptsDir" == "" ] && [ -e "./scripts/" ];then
+    scriptsDir=./scripts
+    relativeDir=.
+elif [ "$scriptsDir" == "" ];then
+    scriptsDir=.
+    relativeDir=..
+fi
+
 # Dependendencias
-source ./3-wine-system-Install.sh
+source $scriptsDir/3-wine-system-Install.sh
 
 # Nomes dos instaladores
 adobeAIR=AdobeAIRInstaller.exe
@@ -19,11 +28,11 @@ verificaInstalaWine "drive_c/Sisbr 2.0/Sisbr 2.0.exe" "$SisBr"
 
 #! Copiar .desktop
 echo "Copiando arquivo .desktop"
-sudo cp ./desktop/Sisbr_2.0.desktop /usr/share/applications/
+sudo cp $relativeDir/desktop/Sisbr_2.0.desktop /usr/share/applications/
 
 # Copiar icones para o sistema
 echo "Inserindo icones do programa no sistema"
-sudo cp -r ./desktop/hicolor/* /usr/share/icons/hicolor/
+sudo cp -r $relativeDir/desktop/hicolor/* /usr/share/icons/hicolor/
 
 # Permissão para todos editarem
 addPerm777 "$wineFolder""drive_c/Sisbr 2.0/" "SisBr"

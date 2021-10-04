@@ -1,5 +1,14 @@
 #!/bin/bash
 
+# Verificar caminhos das dependencias
+if [ "$scriptsDir" == "" ] && [ -e "./scripts/" ];then
+    scriptsDir=./scripts
+    relativeDir=.
+elif [ "$scriptsDir" == "" ];then
+    scriptsDir=.
+    relativeDir=..
+fi
+
 # Criar pasta da sicoob, e criar pasta dos scripts do usuário
 #sudo mkdir /opt/sicoob/
 #sudo mkdir /opt/sicoob/user/
@@ -10,4 +19,4 @@ sudo cp profile.d/3-SisBr-user-install.sh /etc/profile.d/
 sudo chmod -x /etc/profile.d/3-SisBr-user-install.sh
 
 echo "Executando script de instalação"
-./3-SisBr-system-install.sh
+$scriptsDir/3-SisBr-system-install.sh
