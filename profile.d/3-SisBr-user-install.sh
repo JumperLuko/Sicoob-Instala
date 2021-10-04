@@ -16,4 +16,8 @@ if [ -e "$instaladorPasta"/"$adobeAIR" ] && ! [ -e ".wine/drive_c/Program Files 
     sleep 5 && wine "$instaladorPasta"/"$adobeAIR" &
 fi
 
+if ! [ -e "$HOME/.wine/drive_c/windows/Fonts/corefonts.installed" ]; then
+    winetricks corefonts &
+fi
+
 unset adobeAIR instaladorPasta

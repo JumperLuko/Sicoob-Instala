@@ -10,7 +10,7 @@ scriptsDir=./scripts
 # Fornecendo permissão de executar em todos sh
 chmod +x $scriptsDir/*.sh
 
-echo -e "Bem vindo ao Sicoob Instala\n\n" 
+echo -e "\nBem vindo ao Sicoob Instala\n\n" 
 echo -e "Digite o numero da opção que deseja\n"
 
 echo "0- Realizar todas operações abaixo"
@@ -19,7 +19,7 @@ echo "2- Configurar AD"
 echo "3- Instalar SisBR"
 echo "4- Instalar Gercoop"
 echo "5- Configurar VNC"
-echo "6- Caixa"
+echo "6- Instalar Caixa (+java i586)"
 
 echo ""
 read -p "Digite o numero da opção que deseja: " opcao

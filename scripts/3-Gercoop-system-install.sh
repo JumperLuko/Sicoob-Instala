@@ -25,16 +25,16 @@ verificaInstalaWine "drive_c/GerCoop/GerCoop.exe" "$Gercoop"
 
 # Copia executavel do Gercoop
 echo "Copiando executavel SH do Gercoop"
-sudo cp "relativeDir/desktop/Gercoop.sh" /opt/sicoob/run/
+sudo cp "$relativeDir/desktop/Gercoop.sh" /opt/sicoob/run/
 sudo chmod +x "/opt/sicoob/run/Gercoop.sh"
 
 #! Copiar .desktop
 echo "Copiando arquivo .desktop"
-sudo cp relativeDir/desktop/GerCoop.desktop /usr/share/applications/
+sudo cp $relativeDir/desktop/GerCoop.desktop /usr/share/applications/
 
 # Copiar icones para o sistema
 echo "Inserindo icones do programa no sistema"
-sudo cp -r relativeDir/desktop/hicolor/* /usr/share/icons/hicolor/
+sudo cp -r $relativeDir/desktop/hicolor/* /usr/share/icons/hicolor/
 
 # Permissão para todos editarem
 addPerm777 "$wineFolder""drive_c/GerCoop/" "Gercoop"
