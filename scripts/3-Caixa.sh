@@ -33,5 +33,5 @@ sudo chmod +777 /opt/SicoobTerminal
 
 # instalar java
 #? usar Sudo ? testar!
-(cd Plataforma_Caixa && $javaPWD/bin/java -jar $relativeDir/Plataforma_Caixa/Setup.jar)
+(cd Plataforma_Caixa && $javaPWD/bin/java -jar $relativeDir/Setup.jar)
 

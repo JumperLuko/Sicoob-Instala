@@ -34,18 +34,18 @@ echo "Gerando diretórios do wine em $wineFolder"
 sudo WINEPREFIX="$wineFolder" wine wineboot 2>> $HOME/Downloads/SicoobInstalado.log
 
 # Verificando se existe o arquivo do instalador na pasta local ou no sistema
-copia_instalador() {
-    echo "copiando instalador $1 para pasta de instaladores"
-    sudo cp "$1" "$instaladoresFolder"
-    sudo chmod 755 "$instaladoresFolder$1"
-}
-erro_arquivos() {
-    echo "Falha inesperada ao verificar arquivos do $1"
-    echo "O script continuará em 15 segundos"
-    sleep 15
-}
-
 verificaInstalador(){
+    var1=$1
+    copia_instalador() {
+        echo "copiando instalador $var1 para pasta de instaladores"
+        sudo cp "$var1" "$instaladoresFolder"
+        sudo chmod 755 "$instaladoresFolder$var1"
+    }
+    erro_arquivos() {
+        echo "Falha inesperada ao verificar arquivos do $var1"
+        echo "O script continuará em 15 segundos"
+        sleep 15
+    }
     if [ -e "$1" ] && ! [ -e "$instaladoresFolder$1" ]; then
         copia_instalador
     elif [ -e "$1" ] && [ -e "$instaladoresFolder$1" ]; then
@@ -74,6 +74,7 @@ verificaInstalador(){
     else
         erro_arquivos
     fi
+    unset var1
 }
 
 # Verifica se ta instalado e se não, então instala
