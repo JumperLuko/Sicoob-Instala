@@ -46,6 +46,7 @@ verificaInstalador(){
         echo "O script continuará em 15 segundos"
         sleep 15
     }
+    
     if [ -e "$1" ] && ! [ -e "$instaladoresFolder$1" ]; then
         copia_instalador
     elif [ -e "$1" ] && [ -e "$instaladoresFolder$1" ]; then

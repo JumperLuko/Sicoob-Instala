@@ -1,3 +1,0 @@
-2021-10-04 08:57:17,135 [main] INFO  LogSetup(16)  - Iniciando aplicativo de instalação.
- 2021-10-04 08:57:17,140 [main] INFO  LogSetup(16)  - Versão do Instalador: 1.09
- 
