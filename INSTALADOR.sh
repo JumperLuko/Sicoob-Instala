@@ -52,10 +52,16 @@ while true; do
         6)
             $scriptsDir/3-Caixa.sh
             break;;
-        "sair")
+        "sair"|"exit")
             echo "saindo"
             break;;
         *) 
             read -p "Por favor digite um número válido: " opcao;;
     esac
 done
+
+echo -e "\n\n======  ======  ======  ====== ======"
+echo -e " Aperte enter para sair do programa"
+echo -e "======  ======  ======  ====== ======"
+
+read
