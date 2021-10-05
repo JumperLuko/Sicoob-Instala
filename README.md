@@ -5,6 +5,15 @@ Programa para instalação, configuração e compatibilidade automátizada de si
 - Compatibiliza programas Windows (wine)
 - Implementa scripts de verificação e execução ao iniciar usuário
 
+## Como utilizar
+1. Baixe o arquivo comprimido
+2. Descobrima o arquivo
+3. Clique 2 vezes no INSTALADOR.sh
+4. Rode no terminal
+
+Simples assim, tudo será exibido no terminal. 
+
+
 ## Identificação dos pacotes
 ### Niveis
 0. Instalações basicas e primárias para o funcionamento do sistema (costumam ter alta criticidade de quebrar o sistema)
