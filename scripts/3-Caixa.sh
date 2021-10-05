@@ -34,10 +34,11 @@ else
 fi
 
 # Criar pasta de instalação e dar permissão (se não criar, o instalador não consegue instalar sem sudo)
-sudo mkdir /opt/SicoobTerminal
-sudo chmod +777 /opt/SicoobTerminal
+# sudo mkdir /opt/SicoobTerminal
+# sudo chmod +777 /opt/SicoobTerminal
 
 # instalar java
-#? usar Sudo ? testar!
-(cd $relativeDir/Plataforma_Caixa && $javaPWD/bin/java -jar ./Setup.jar)
+(cd $relativeDir/Plataforma_Caixa && sudo $javaPWD/bin/java -jar ./Setup.jar)
 
+# Rodar Terminal com root
+#sudo '/opt/jre1.8.0_i586/bin/java' -jar terminal.jar

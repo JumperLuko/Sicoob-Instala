@@ -1,0 +1,9 @@
+[Desktop Entry]
+Version=1.0
+Name=Caixa
+Exec='/opt/jre1.8.0_i586/bin/java' -jar terminal.jar
+Path=/opt/SicoobTerminal/Terminal
+Comment=Caixa
+Icon=/opt/SicoobTerminal/Terminal/SicoobTerminal.ico
+Type=Application
+Categories=Terminal
