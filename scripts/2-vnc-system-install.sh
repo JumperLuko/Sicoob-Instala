@@ -1,5 +1,14 @@
 #!/bin/bash
 
+# Verificar caminhos das dependencias
+if [ "$scriptsDir" == "" ] && [ -e "./scripts/" ];then
+    scriptsDir=./scripts
+    relativeDir=.
+elif [ "$scriptsDir" == "" ];then
+    scriptsDir=.
+    relativeDir=..
+fi
+
 sudo echo ""
 
 # Criar arquivo com senha vnc + permissão de leitura
@@ -9,7 +18,7 @@ sudo chmod +444 /opt/sicoob/passwdvnc.pwd
 
 # Iniciar VNC ao iniciar usuário
 echo "Configurando VNC ao iniciar usuário"
-sudo cp profile.d/x11vnc-user.sh /etc/profile.d/
+sudo cp $relativeDir/profile.d/x11vnc-user.sh /etc/profile.d/
 
 # Iniciar com sistema
 #! Arquivo de inicialização não funciona pois o usuário guess está dando erro
