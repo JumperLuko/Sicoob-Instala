@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jnlp spec="1.5" codebase="https://empresarial.sicoobnet.com.br/instalador" href="InstaladorLegadoSicoobnetEmpresarial.jnlp">
+   <information>
+      <title>Instalador Sicoobnet Empresarial (Legado)</title>
+      <vendor>Banco Cooperativo do Brasil SA</vendor>
+      <description>Instalador do Sicoobnet Empresarial</description>
+      <homepage href="https://empresarial.sicoobnet.com.br" />
+      <description kind="short">Instalador do Sicoobnet Empresarial (Legado)</description>
+   </information>
+   <security>
+      <all-permissions />
+   </security>
+   <resources>
+      <j2se version="1.6+" href="http://java.sun.com/products/autodl/j2se" max-heap-size="512m" />
+      <jar href="/instalador/instalador-legado.jar" main="true" />
+   </resources>
+   <applet-desc documentBase="https://empresarial.sicoobnet.com.br/instalador/" name="Instalador" main-class="br.com.sicoobnet.AppletJRE" width="425" height="300">
+      <param name="java_arguments" value="-Xmx512m" />
+   </applet-desc>
+</jnlp>
