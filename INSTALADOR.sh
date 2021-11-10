@@ -20,6 +20,7 @@ echo "3- Instalar SisBR"
 echo "4- Instalar Gercoop"
 echo "5- Configurar VNC"
 echo "6- Instalar Caixa (+java i586)"
+echo "7- Instalar Sicoob Empresarial (falta atalho para o usuário abrir)"
 
 echo ""
 read -p "Digite o numero da opção que deseja: " opcao
@@ -32,7 +33,7 @@ while true; do
             $scriptsDir/3-SisBr-all.sh
             $scriptsDir/3-Gercoop-system-install.sh
             $scriptsDir/2-vnc-system-install.sh
-            $scriptsDir/3-Caixa.sh
+            $scriptsDir/4-Caixa-install.sh
             break;;
         1) 
             $scriptsDir/01-basicsPackages_OS+basicConfig.sh
@@ -50,7 +51,10 @@ while true; do
             $scriptsDir/2-vnc-system-install.sh
             break;;
         6)
-            $scriptsDir/3-Caixa.sh
+            $scriptsDir/4-Caixa-install.sh
+            break;;
+        7)
+            $scriptsDir/4-SicoobEmpresarial-install.sh
             break;;
         "sair"|"exit")
             echo "saindo"

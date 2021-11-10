@@ -24,4 +24,4 @@ Simples assim, tudo será exibido no terminal.
 
 3. Instalação de pacote Wine (raramente afetam o sistema, mas afetam os programs que rodam com wine)
 
-4. Instalação de pacotes Isolados, tais como, Flatpak, Snap, Appimage ou SH sem permissão elevada (costumam não alterar o sistema)
+4. Instalação de pacotes Isolados, tais como, Flatpak, Snap, Appimage, Java ou SH sem permissão elevada (costumam não alterar o sistema)
