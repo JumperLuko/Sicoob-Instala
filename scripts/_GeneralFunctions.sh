@@ -64,3 +64,9 @@ sim_nao_canc_echo() {
 sim_nao_canc_echo_editar() {
     sim_nao_canc-echo_editar; sim_nao_canc
 }
+
+encerra_execucao() {
+    echo "este programa encerrará a execução"
+    sleep 5
+    exit
+}

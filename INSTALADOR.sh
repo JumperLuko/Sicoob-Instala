@@ -10,8 +10,10 @@ scriptsDir=./scripts
 # Fornecendo permissão de executar em todos sh
 chmod +x $scriptsDir/*.sh
 
-echo -e "\nBem vindo ao Sicoob Instala\n\n" 
-echo -e "Digite o numero da opção que deseja\n"
+echo -e "Bem vindo ao Sicoob Instala\n\n" 
+echo -e "------  ------  ------ ------"
+echo -e "     Instalar Programas"
+echo -e "------  ------  ------ ------\n"
 
 echo "0- Realizar todas operações abaixo"
 echo "1- Instalar pacotes e configurar o basico no PC (IMPORTANTE)"
@@ -21,6 +23,7 @@ echo "4- Instalar Gercoop"
 echo "5- Configurar VNC"
 echo "6- Instalar Caixa (+java i586)"
 echo "7- Instalar Sicoob Empresarial (falta atalho para o usuário abrir)"
+echo "99- Desinstalar Programas"
 
 echo ""
 read -p "Digite o numero da opção que deseja: " opcao
@@ -34,6 +37,7 @@ while true; do
             $scriptsDir/3-Gercoop-system-install.sh
             $scriptsDir/2-vnc-system-install.sh
             $scriptsDir/4-Caixa-install.sh
+            $scriptsDir/4-SicoobEmpresarial-install.sh
             break;;
         1) 
             $scriptsDir/01-basicsPackages_OS+basicConfig.sh
@@ -55,6 +59,37 @@ while true; do
             break;;
         7)
             $scriptsDir/4-SicoobEmpresarial-install.sh
+            break;;
+        99)
+            unset opcao
+            echo -e "\n\n------  ------  ------ ------"
+            echo -e "    Desinstalar Programas"
+            echo -e "------  ------  ------ ------\n"
+
+            echo "1- Desinstalar programas em 'wine' (Sisbr)"
+            echo "2- Remover pasta 'wine' (programas de Windows)"
+            echo "3- remover pasta '/opt/sicoob' (Sisbr)"
+
+            echo ""
+            read -p "Digite o numero da opção que deseja: " opcao
+            while true; do
+                case $opcao in
+                1)
+                    $scriptsDir/3-wine-system-uninstall.sh
+                    break;;
+                2)
+                    $scriptsDir/3-wineFolder-remove.sh
+                    break;;
+                3)
+                    $scriptsDir/234-SicoobFolder-remove.sh
+                    break;;
+                "sair"|"exit")
+                    echo "saindo"
+                    break;;
+                *)
+                    read -p "Por favor digite um número válido: " opcao;;
+                esac
+            done
             break;;
         "sair"|"exit")
             echo "saindo"

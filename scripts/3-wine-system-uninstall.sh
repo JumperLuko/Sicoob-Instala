@@ -20,7 +20,7 @@ runFolder="/opt/sicoob/run/"
 
 # Wine uninstaller
 echo "Rodando desinstalador em $wineFolder"
-sudo WINEPREFIX="$wineFolder" wine uninstaller
+sudo WINEPREFIX="$wineFolder" wine uninstaller 2>> $HOME/Downloads/SicoobInstalado.log
 
 # Remover pasta inteira do wine do sistem
 #echo "removendo pasta do do wine"

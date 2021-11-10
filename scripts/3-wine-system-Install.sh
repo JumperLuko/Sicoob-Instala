@@ -43,8 +43,8 @@ verificaInstalador(){
     }
     erro_arquivos() {
         echo "Falha inesperada ao verificar arquivos do $var1"
-        echo "O script continuará em 15 segundos"
-        sleep 15
+        echo "O script continuará em 10 segundos"
+        sleep 10
     }
     
     if [ -e "$1" ] && ! [ -e "$instaladoresFolder$1" ]; then
@@ -69,9 +69,6 @@ verificaInstalador(){
                 fi
             fi;
         done
-        echo "este arquivo encerrará a execução"
-        sleep 5
-        exit
     else
         erro_arquivos
     fi
@@ -102,5 +99,5 @@ addPerm777(){
     sim_nao;if [ "$sim_ou_nao" == "nao" ];then
         echo "Não? Será aplicado mesmo assim :P"
     fi;
-    sudo chmod 777 -R /opt/sicoob/wine/drive_c/Sisbr\ 2.0/
+    sudo chmod 777 -R "$1"
 }
