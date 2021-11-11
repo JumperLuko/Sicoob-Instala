@@ -21,6 +21,7 @@ sicoobFolder="/opt/sicoob/"
 wineFolder="/opt/sicoob/wine/"
 instaladoresFolder="/opt/sicoob/instaladores/"
 runFolder="/opt/sicoob/run/"
+instaladoresLocal="$relativeDir/instaladores/"
 
 # Criando diretórios
 echo "Gerando pastas"
@@ -37,8 +38,8 @@ sudo WINEPREFIX="$wineFolder" wine wineboot 2>> $HOME/Downloads/SicoobInstalado.
 verificaInstalador(){
     var1=$1
     copia_instalador() {
-        echo "copiando instalador $var1 para pasta de instaladores"
-        sudo cp "$var1" "$instaladoresFolder"
+        echo "copiando instalador $var1 da pasta 'instaladores' para o sistema"
+        sudo cp "$relativeDir/instaladores/$var1" "$instaladoresFolder"
         sudo chmod 755 "$instaladoresFolder$var1"
     }
     erro_arquivos() {
@@ -47,22 +48,22 @@ verificaInstalador(){
         sleep 10
     }
     
-    if [ -e "$1" ] && ! [ -e "$instaladoresFolder$1" ]; then
+    if [ -e "$instaladoresLocal" ] && ! [ -e "$instaladoresFolder$1" ]; then
         copia_instalador
-    elif [ -e "$1" ] && [ -e "$instaladoresFolder$1" ]; then
+    elif [ -e "$instaladoresLocal" ] && [ -e "$instaladoresFolder$1" ]; then
         echo "Instalador $1 já existe em $instaladoresFolder, deseja sobrescrever?"
         sim_nao;if [ "$sim_ou_nao" == "sim" ];then
             copia_instalador
         fi;
-    elif ! [ -e "$1" ] && [ -e "$instaladoresFolder$1" ]; then
-        echo -e "\n\nNão existe instalador com nome $1 nesta pasta, porém existe no sistema e será usada esta"
-    elif ! [ -e "$1" ] && ! [ -e "$instaladoresFolder$1" ]; then
-        echo "não existe instaladores do $1, por favor jogue um arquivo nesta pasta com nome $1 e digite sim"
-        while ! [ -e "$1" ]; do
+    elif ! [ -e "$instaladoresLocal" ] && [ -e "$instaladoresFolder$1" ]; then
+        echo -e "\n\nNão existe instalador com nome $1 na pasta 'instaladores', porém existe no sistema e será usada esta"
+    elif ! [ -e "$instaladoresLocal" ] && ! [ -e "$instaladoresFolder$1" ]; then
+        echo "não existe instaladores do $1 na pasta 'instaladores', por favor jogue um arquivo nessa pasta com nome $1 e digite sim"
+        while ! [ -e "$instaladoresLocal" ]; do
             sim_nao_canc_echo;if [ "$sim_ou_nao" == "sim" ];then
-                if [ -e "$1" ];then
+                if [ -e "$instaladoresLocal" ];then
                     copia_instalador
-                elif ! [ -e "$1" ];then
+                elif ! [ -e "$instaladoresLocal" ];then
                     echo "Instalador não encontrado, tente novamente por arquivo com nome $1"
                 else
                     erro_arquivos
