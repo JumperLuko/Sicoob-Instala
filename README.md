@@ -1,4 +1,5 @@
-# Sicoob Instala
+# Sicoob Instala ![alt text](./sicoob-instala.svg "Sicoob Instala") 
+
 Programa para instalação, configuração e compatibilidade automátizada de sistemas Linux baseados no Ubuntu para Sicoob
 
 - Configura, instala pacotes e atualiza o sistema

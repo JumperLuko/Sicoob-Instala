@@ -1,0 +1,10 @@
+[Desktop Entry]
+Version=1.0
+Name=Sicoob Instala
+Exec=./INSTALADOR.sh
+Path=./
+Comment=Instalador Sicoob para Linux
+Icon=./sicoob-instala.svg
+Type=Application
+Categories=Terminal
+Terminal=true
