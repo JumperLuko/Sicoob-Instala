@@ -10,20 +10,21 @@ scriptsDir=./scripts
 # Fornecendo permissão de executar em todos sh
 chmod +x $scriptsDir/*.sh
 
-echo -e "Bem vindo ao Sicoob Instala\n\n" 
-echo -e "------  ------  ------ ------"
-echo -e "     Instalar Programas"
-echo -e "------  ------  ------ ------\n"
+echo -e "\nBem vindo ao \e[1;32mSicoob Instala\e[0m" 
+echo -e "Para sistemas baseados no Ubuntu Focal (20.04)\n\n"
+echo -e "\e[44m------  ------  ------ ------\e[0m"
+echo -e "\e[1;44m     Instalar Programas      \e[0m"
+echo -e "\e[44m------  ------  ------ ------\e[0m\n"
 
-echo "0- Realizar todas operações abaixo"
-echo "1- Instalar pacotes e configurar o basico no PC (IMPORTANTE)"
-echo "2- Configurar AD"
-echo "3- Instalar SisBR"
-echo "4- Instalar Gercoop"
-echo "5- Configurar VNC"
-echo "6- Instalar Caixa (+java i586)"
-echo "7- Instalar Sicoob Empresarial (falta atalho para o usuário abrir)"
-echo "99- Desinstalar Programas"
+echo -e "\e[34m0\e[0m -  Realizar todas operações abaixo"
+echo -e "\e[34m1\e[0m -  Instalar pacotes e configurar o basico no PC (IMPORTANTE)"
+echo -e "\e[34m2\e[0m -  Configurar AD"
+echo -e "\e[34m3\e[0m -  Instalar SisBR"
+echo -e "\e[34m4\e[0m -  Instalar Gercoop"
+echo -e "\e[34m5\e[0m -  Configurar VNC"
+echo -e "\e[34m6\e[0m -  Instalar Caixa (+java i586)"
+echo -e "\e[34m7\e[0m -  Instalar Sicoob Empresarial (falta atalho para o usuário abrir)"
+echo -e "\e[34m99\e[0m - Desinstalar Programas"
 
 echo ""
 read -p "Digite o numero da opção que deseja: " opcao
@@ -62,13 +63,13 @@ while true; do
             break;;
         99)
             unset opcao
-            echo -e "\n\n------  ------  ------ ------"
-            echo -e "    Desinstalar Programas"
-            echo -e "------  ------  ------ ------\n"
+            echo -e "\n\n\e[44m------  ------  ------ ------\e[0m"
+            echo -e "\e[1;44m    Desinstalar Programas    \e[0m"
+            echo -e "\e[44m------  ------  ------ ------\e[0m\n"
 
-            echo "1- Desinstalar programas em 'wine' (Sisbr)"
-            echo "2- Remover pasta 'wine' (programas de Windows)"
-            echo "3- remover pasta '/opt/sicoob' (Sisbr)"
+            echo -e "\e[34m1\e[0m -  Desinstalar programas em 'wine' (Sisbr)"
+            echo -e "\e[34m2\e[0m -  Remover pasta 'wine' (programas de Windows)"
+            echo -e "\e[34m3\e[0m -  remover pasta '/opt/sicoob' (Sisbr)"
 
             echo ""
             read -p "Digite o numero da opção que deseja: " opcao
