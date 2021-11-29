@@ -21,11 +21,21 @@ sudo sh -c 'echo "deb [arch=amd64] https://packages.microsoft.com/repos/ms-teams
 wget -qO - https://keys.anydesk.com/repos/DEB-GPG-KEY | sudo apt-key add -
 sudo sh -c 'echo "deb http://deb.anydesk.com/ all main" > /etc/apt/sources.list.d/anydesk-stable.list'
 
+# TeamViewer
+wget -O - https://download.teamviewer.com/download/linux/signature/TeamViewer2017.asc | sudo apt-key add -
+sudo apt-add-repository "deb http://linux.teamviewer.com/deb stable main"
+
 # OnlyOffice
 if ! [ -e "$relativeDir/instaladores/onlyoffice-desktopeditors_amd64.deb" ]; then
     wget https://download.onlyoffice.com/install/desktop/editors/linux/onlyoffice-desktopeditors_amd64.deb -P $relativeDir/instaladores
 fi
 sudo gdebi $relativeDir/instaladores/onlyoffice-desktopeditors_amd64.deb
+
+# Zoom meeting
+if ! [ -e "$relativeDir/instaladores/zoom_amd64.deb" ]; then
+    wget https://zoom.us/client/latest/zoom_amd64.deb -P $relativeDir/instaladores
+fi
+sudo gdebi $relativeDir/instaladores/zoom_amd64.deb
 
 # Forticlient VPN
 echo -e "\n\e[36mForticlient VPN\e[0m"
@@ -34,4 +44,4 @@ echo "Download direto: https://links.fortinet.com/forticlient/deb/vpnagent"
 
 # Update and Install programs
 sudo apt update
-sudo apt install google-chrome-stable teams anydesk
+sudo apt install google-chrome-stable teams anydesk teamviewer

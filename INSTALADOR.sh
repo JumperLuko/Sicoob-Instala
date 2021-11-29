@@ -18,7 +18,7 @@ echo -e "\e[44m------  ------  ------ ------\e[0m\n"
 
 echo -e "\e[34m0\e[0m -  Realizar todas operações abaixo"
 echo -e "\e[34m1\e[0m -  Instalar pacotes e configurar o basico no PC (IMPORTANTE)"
-echo -e "\e[34m2\e[0m -  Instalar pacotes de repositórios externos (Chrome, Teams, Anydesk, OnlyOffice)"
+echo -e "\e[34m2\e[0m -  Instalar pacotes de repositórios externos (Chrome, Teams, Anydesk, Teamviewer, OnlyOffice, Zoom)"
 echo -e "\e[34m3\e[0m -  Configurar AD"
 echo -e "\e[34m4\e[0m -  Instalar SisBR"
 echo -e "\e[34m5\e[0m -  Instalar Gercoop"
