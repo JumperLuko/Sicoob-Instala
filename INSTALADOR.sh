@@ -18,12 +18,13 @@ echo -e "\e[44m------  ------  ------ ------\e[0m\n"
 
 echo -e "\e[34m0\e[0m -  Realizar todas operações abaixo"
 echo -e "\e[34m1\e[0m -  Instalar pacotes e configurar o basico no PC (IMPORTANTE)"
-echo -e "\e[34m2\e[0m -  Configurar AD"
-echo -e "\e[34m3\e[0m -  Instalar SisBR"
-echo -e "\e[34m4\e[0m -  Instalar Gercoop"
-echo -e "\e[34m5\e[0m -  Configurar VNC"
-echo -e "\e[34m6\e[0m -  Instalar Caixa (+java i586)"
-echo -e "\e[34m7\e[0m -  Instalar Sicoob Empresarial (falta atalho para o usuário abrir)"
+echo -e "\e[34m2\e[0m -  Instalar pacotes de repositórios externos (Chrome, Teams, Anydesk, OnlyOffice)"
+echo -e "\e[34m3\e[0m -  Configurar AD"
+echo -e "\e[34m4\e[0m -  Instalar SisBR"
+echo -e "\e[34m5\e[0m -  Instalar Gercoop"
+echo -e "\e[34m6\e[0m -  Configurar VNC"
+echo -e "\e[34m7\e[0m -  Instalar Caixa (+java i586)"
+echo -e "\e[34m8\e[0m -  Instalar Sicoob Empresarial (falta atalho para o usuário abrir)"
 echo -e "\e[34m99\e[0m - Desinstalar Programas"
 
 echo ""
@@ -44,21 +45,24 @@ while true; do
             $scriptsDir/01-basicsPackages_OS+basicConfig.sh
             break;;
         2)
-            $scriptsDir/1-configAD.sh
+            $scriptsDir/0-repositoryPrograms-install.sh
             break;;
         3)
+            $scriptsDir/1-configAD.sh
+            break;;
+        4)
             $scriptsDir/3-SisBr-all.sh
             break;;
-    	4)
+    	5)
             $scriptsDir/3-Gercoop-system-install.sh
             break;;
-        5)
+        6)
             $scriptsDir/2-vnc-system-install.sh
             break;;
-        6)
+        7)
             $scriptsDir/4-Caixa-install.sh
             break;;
-        7)
+        8)
             $scriptsDir/4-SicoobEmpresarial-install.sh
             break;;
         99)

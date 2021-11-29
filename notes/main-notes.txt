@@ -39,3 +39,10 @@ https://plus.diolinux.com.br/t/sicoob-empresarial-java/27557
 https://wikitux.wordpress.com/2019/10/05/instalando-o-sicoob-netempresarial-no-linux/
 https://empresarial.sicoobnet.com.br/instalador/#instalar
 https://www.google.com/search?q=sicooblinux
+
+
+# Cores no terminal
+https://www.shellhacks.com/bash-colors/
+
+# Automatic upgrade
+https://www.blackmoreops.com/2021/10/28/how-to-configure-automatic-updates-in-ubuntu-server/

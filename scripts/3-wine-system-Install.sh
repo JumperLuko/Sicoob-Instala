@@ -43,8 +43,8 @@ verificaInstalador(){
         sudo chmod 755 "$instaladoresFolder$var1"
     }
     erro_arquivos() {
-        echo "Falha inesperada ao verificar arquivos do $var1"
-        echo "O script continuará em 10 segundos"
+        echo -e "\e[31mFalha inesperada ao verificar arquivos do $var1\e[0m"
+        echo -e "\e[1;31mO script continuará em 10 segundos\e[0m"
         sleep 10
     }
     
@@ -58,13 +58,13 @@ verificaInstalador(){
     elif ! [ -e "$instaladoresLocal" ] && [ -e "$instaladoresFolder$1" ]; then
         echo -e "\n\nNão existe instalador com nome $1 na pasta 'instaladores', porém existe no sistema e será usada esta"
     elif ! [ -e "$instaladoresLocal" ] && ! [ -e "$instaladoresFolder$1" ]; then
-        echo "não existe instaladores do $1 na pasta 'instaladores', por favor jogue um arquivo nessa pasta com nome $1 e digite sim"
+        echo -e "\e[31mnão existe instaladores do $1 na pasta 'instaladores', por favor jogue um arquivo nessa pasta com nome\e[0m\e[1;31m $1 e digite sim\e[0m"
         while ! [ -e "$instaladoresLocal" ]; do
             sim_nao_canc_echo;if [ "$sim_ou_nao" == "sim" ];then
                 if [ -e "$instaladoresLocal" ];then
                     copia_instalador
                 elif ! [ -e "$instaladoresLocal" ];then
-                    echo "Instalador não encontrado, tente novamente por arquivo com nome $1"
+                    echo -e "\e[31mInstalador não encontrado, tente novamente por arquivo com nome\e[0m \e[1;31m$1\e[0m"
                 else
                     erro_arquivos
                 fi
