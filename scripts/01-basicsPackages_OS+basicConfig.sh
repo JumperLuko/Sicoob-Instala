@@ -45,6 +45,20 @@ echo "Por favor defina o nome da maquina, no bloco de notas que abrirá"
 sleep 5
 sudo gedit /etc/hostname
 
+# Disable scroll lock
+# echo -e "\nComentar linha Scroll lock do teclado BR?"
+# echo "modifier_map Mod3   { Scroll_Lock };"
+# yes_no;if [ $yes_or_no == "yes" ]; then
+#     sudo nano /usr/share/X11/xkb/symbols/br
+# fi
+
+echo "Criando usuário administrador local"
+sudo adduser administrador
+sudo adduser administrador sudo
+
+echo "Senha para root"
+sudo passwd root
+
 # reboot?
 echo "Deseja reiniciar?"
 echo "é recomendado para implementar o nome da maquina"
