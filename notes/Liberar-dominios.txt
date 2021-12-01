@@ -1,0 +1,22 @@
+=== Requerido ===
+- Corefonts
+mirrors.kernel.org
+
+
+=== todos ===
+
+- Fontes de texto
+mirrors.kernel.org
+assets.ubuntu.com
+launchpad.net
+github.com
+sourceforge.net
+
+- Instaladores Microsoft
+download.microsoft.com
+
+-Codecs
+web.archive.org
+
+- Outros
+

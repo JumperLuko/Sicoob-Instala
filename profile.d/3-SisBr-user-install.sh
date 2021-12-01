@@ -19,7 +19,7 @@ if [ -e "$instaladorPasta"/"$adobeAIR" ] && ! [ -e ".wine/drive_c/Program Files 
 fi
 
 if ! [ -e "$HOME/.wine/drive_c/windows/Fonts/corefonts.installed" ]; then
-    gnome-terminal -- bash -c 'echo -e "Aperte enter para Instalar \e[5;1;32mdependencia do SisBR\e[0m (Fontes)" && read && winetricks corefonts' &
+    sleep 6 && gnome-terminal -- bash -c 'echo -e "Aperte enter para Instalar \e[5;1;32mdependencia do SisBR\e[0m (Fontes)" && read && winetricks corefonts' &
 fi
 
 unset adobeAIR instaladorPasta

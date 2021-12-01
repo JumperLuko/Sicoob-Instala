@@ -39,6 +39,10 @@ sudo apt install --install-recommends winehq-stable
 # criar pasta de usuário automáticamente ao usuário entrar pelo AD
 sudo pam-auth-update --enable mkhomedir
 
+# Descomentar linha do wayland false para fazer acesso remoto
+#! Colocar sed dps
+#sudo nano /etc/gdm3/custom.conf
+
 # Configurar hostname
 #! Colocar um prompt para confirmar o reboot com sim e não
 echo "Por favor defina o nome da maquina, no bloco de notas que abrirá"
