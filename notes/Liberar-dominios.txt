@@ -5,6 +5,19 @@ mirrors.kernel.org
 - Wine (compatibilidade windows)
 dl.winehq.org
 
+- Repositórios
+linux.teamviewer.com
+download.teamviewer.com
+dl.google.com
+packages.microsoft.com
+deb.anydesk.com
+keys.anydesk.com
+
+- deb
+download.onlyoffice.com
+zoom.us
+fortinet.com
+
 === todos ===
 
 - Fontes de texto
