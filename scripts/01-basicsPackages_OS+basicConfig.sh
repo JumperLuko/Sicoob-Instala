@@ -39,6 +39,13 @@ sudo apt-key add winehq.key
 sudo add-apt-repository 'deb https://dl.winehq.org/wine-builds/ubuntu/ focal main' -u
 sudo apt install --install-recommends winehq-stable
 
+# Automatic updates
+# https://www.blackmoreops.com/2021/10/28/how-to-configure-automatic-updates-in-ubuntu-server/
+#sudo nano /etc/apt/apt.conf.d/50unattended-upgrades
+#sudo nano /etc/apt/apt.conf.d/20auto-upgrades
+#/usr/lib/apt/apt.systemd.daily
+#sudo service apt-daily start
+
 # criar pasta de usuário automáticamente ao usuário entrar pelo AD
 sudo pam-auth-update --enable mkhomedir
 
@@ -54,9 +61,10 @@ sudo gedit /etc/hostname
 # Disable scroll lock (bug de travamento com teclas de funções no teclado BR)
 sudo sed -i -e 's/    modifier_map Mod3   { Scroll_Lock };/    #modifier_map Mod3   { Scroll_Lock };/' /usr/share/X11/xkb/symbols/br
 
-echo "Criando usuário administrador local"
-sudo adduser administrador
-sudo adduser administrador sudo
+# Administrador local
+#echo "Criando usuário administrador local"
+#sudo adduser administrador
+#sudo adduser administrador sudo
 
 echo "Senha para root"
 sudo passwd root
