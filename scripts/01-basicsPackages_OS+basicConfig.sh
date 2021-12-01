@@ -14,6 +14,9 @@ sim_nao() {
 
 #! Tenho achar forma de verificar se o Firewall está bloqueando os repositórios e trocar automáticamente, ou abrir a janela para o administrador mudar os repositórios (e tbm infomar ele o que deve fazer)
 
+echo -e "Verifique se o \e[1;34mhorário do sistema\e[0m está correto e aperte enter"
+read
+
 # Atualizar corretamente os repositórios
 sudo apt update
 sudo apt upgrade
@@ -39,9 +42,8 @@ sudo apt install --install-recommends winehq-stable
 # criar pasta de usuário automáticamente ao usuário entrar pelo AD
 sudo pam-auth-update --enable mkhomedir
 
-# Descomentar linha do wayland false para fazer acesso remoto
-#! Colocar sed dps
-#sudo nano /etc/gdm3/custom.conf
+# Gerenciador de login em xorg, para permitir acesso remoto
+sudo sed -i -e 's/# WaylandEnable=false/WaylandEnable=false/' /etc/gdm3/custom.conf
 
 # Configurar hostname
 #! Colocar um prompt para confirmar o reboot com sim e não
@@ -49,12 +51,8 @@ echo "Por favor defina o nome da maquina, no bloco de notas que abrirá"
 sleep 5
 sudo gedit /etc/hostname
 
-# Disable scroll lock
-# echo -e "\nComentar linha Scroll lock do teclado BR?"
-# echo "modifier_map Mod3   { Scroll_Lock };"
-# yes_no;if [ $yes_or_no == "yes" ]; then
-#     sudo nano /usr/share/X11/xkb/symbols/br
-# fi
+# Disable scroll lock (bug de travamento com teclas de funções no teclado BR)
+sudo sed -i -e 's/    modifier_map Mod3   { Scroll_Lock };/    #modifier_map Mod3   { Scroll_Lock };/' /usr/share/X11/xkb/symbols/br
 
 echo "Criando usuário administrador local"
 sudo adduser administrador
