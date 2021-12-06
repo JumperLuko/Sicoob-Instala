@@ -38,7 +38,7 @@ fi
 # sudo chmod +777 /opt/SicoobTerminal
 
 # instalar java
-(cd $relativeDir/Plataforma_Caixa && sudo $javaPWD/bin/java -jar ./Setup.jar)
+(cd $relativeDir/instaladores/Plataforma_Caixa && sudo $javaPWD/bin/java -jar ./Setup.jar)
 
 # Rodar Terminal com root
 #sudo '/opt/jre1.8.0_i586/bin/java' -jar terminal.jar

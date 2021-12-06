@@ -28,4 +28,4 @@ Simples assim, tudo será exibido no terminal.
 
 # Desafios atuais
 - Driver da digitalizadora de cheque para Linux
-- Agger e o dotnet425
+- Agger e o dotnet452
