@@ -1,5 +1,4 @@
 # Sicoob Instala ![alt text](./sicoob-instala.svg "Sicoob Instala") 
-
 Programa para instalação, configuração e compatibilidade automátizada de sistemas Linux baseados no Ubuntu para Sicoob
 
 - Configura, instala pacotes e atualiza o sistema
@@ -26,3 +25,7 @@ Simples assim, tudo será exibido no terminal.
 3. Instalação de pacote Wine (raramente afetam o sistema, mas afetam os programs que rodam com wine)
 
 4. Instalação de pacotes Isolados, tais como, Flatpak, Snap, Appimage, Java ou SH sem permissão elevada (costumam não alterar o sistema)
+
+# Desafios atuais
+- Driver da digitalizadora de cheque para Linux
+- Agger e o dotnet425

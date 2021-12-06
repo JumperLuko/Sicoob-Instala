@@ -15,3 +15,6 @@ javaws $relativeDir/instaladores/InstaladorLegadoSicoobnetEmpresarial.jnlp
 #! Criar .desktop para usuário
 # dificuldade 1: O usuário terá que saber onde instalar
 # dificuldade 2: Eu terei que referenciar o .desktop onde o usuário instalar
+
+# sudo cp sicoobnet.sh $HOME/Sicoobnet
+# sudo chmod +x $HOME/Sicoobnet/sicoobnet.sh

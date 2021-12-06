@@ -7,13 +7,11 @@ jumperluko.github.io
 - Configurações automáticas de compartilhamento de pasta na rede via Samba
 
 # Teams
-- Tem como automatizar a instalação?
-https://www.microsoft.com/en-us/microsoft-teams/download-app#desktopAppDownloadregion
+OK - Tem como automatizar a instalação?
 
 # VNC
 OK - configurar o VNC ao iniciar sessão do usuário, e terá que continuar rodando após a primeira sessão 
 - VNC que rode ao trocar de usuário
-- Qual a forma padrão de rodar VNC ao iniciar sistema?
 OK - Onde armazenar arquivo de senha VNC?
 https://wiki.archlinux.org/title/X11vnc
 
@@ -30,15 +28,7 @@ OK - Arrumar icones do Desktop do Gercoop
 - Tentar Citrix
 
 # Sicoob empresarial 
-- comandos
-`javaws InstaladorSicoobnetEmpresarial.jnlp`
-`sudo chmod +x /usr/local/bin/sicoobnet.sh`
-- Experimentar versão java
--links
-https://plus.diolinux.com.br/t/sicoob-empresarial-java/27557
-https://wikitux.wordpress.com/2019/10/05/instalando-o-sicoob-netempresarial-no-linux/
-https://empresarial.sicoobnet.com.br/instalador/#instalar
-https://www.google.com/search?q=sicooblinux
+OK - Experimentar versão java
 
 
 # Cores no terminal
