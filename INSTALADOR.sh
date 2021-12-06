@@ -24,7 +24,7 @@ echo -e "\e[34m4\e[0m -  Instalar SisBR"
 echo -e "\e[34m5\e[0m -  Instalar Gercoop"
 echo -e "\e[34m6\e[0m -  Configurar VNC"
 echo -e "\e[34m7\e[0m -  Instalar Caixa (+java i586)"
-echo -e "\e[34m8\e[0m -  Instalar Sicoob Empresarial (falta atalho para o usuário abrir)"
+echo -e "\e[34m8\e[0m -  Instalar Sicoob Empresarial (instalação dentro do usuário)"
 echo -e "\e[34m99\e[0m - Desinstalar Programas"
 
 echo ""

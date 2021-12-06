@@ -1,9 +1,9 @@
 [Desktop Entry]
 Version=1.0
-Name=Sicoob Empresarial
+Name=Sicoobnet Empresarial
 Exec=/home/someUser/Sicoobnet/sicoobnet.sh
 StartupNotify=true
 Terminal=false
 Icon=java
 Type=Application
-
+Keywords=Sicoob;cooperativa;Sicoobnet

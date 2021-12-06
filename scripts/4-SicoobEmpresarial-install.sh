@@ -10,11 +10,12 @@ elif [ "$scriptsDir" == "" ];then
 fi
 
 echo "Instalando Sicoob Empresarial"
-javaws $relativeDir/instaladores/InstaladorLegadoSicoobnetEmpresarial.jnlp
+echo -e "\e[1;5;34mInstale em \e[0m/home/PastaDoUsuario/Sicoobnet"
+sleep 3
+javaws $relativeDir/instaladores/InstaladorLegadoSicoobnetEmpresarial.jnlp >> $HOME/Downloads/SicoobInstalado.log
 
-#! Criar .desktop para usuário
-# dificuldade 1: O usuário terá que saber onde instalar
-# dificuldade 2: Eu terei que referenciar o .desktop onde o usuário instalar
-
-# sudo cp sicoobnet.sh $HOME/Sicoobnet
-# sudo chmod +x $HOME/Sicoobnet/sicoobnet.sh
+echo "Gerando atalhos"
+cp $relativeDir/scripts/sicoobnet.sh $HOME/Sicoobnet/
+chmod +x $HOME/Sicoobnet/sicoobnet.sh
+cp $relativeDir/desktop/sicoob-empresarial.desktop $HOME/.local/share/applications/
+sed -i -e "s/someUser/$USER/" $HOME/.local/share/applications/sicoob-empresarial.desktop
