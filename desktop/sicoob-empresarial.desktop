@@ -4,6 +4,6 @@ Name=Sicoobnet Empresarial
 Exec=/home/someUser/Sicoobnet/sicoobnet.sh
 StartupNotify=true
 Terminal=false
-Icon=java
+Icon=SicoobEmp
 Type=Application
 Keywords=Sicoob;cooperativa;Sicoobnet
