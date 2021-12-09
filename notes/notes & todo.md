@@ -46,12 +46,17 @@ jumperluko.github.io
     ## Gerais
     
     - [ ]  Primeira abertura do usuário exibir zorin-appearance
+    - [ ]  Opção de colocar swap file, e pergunta quantos GB de swal
+        - [ ]  Outra que permite apagar swapfile
     
     ## Outros
     
     - [ ]  Tentar Citrix
     - [ ]  Configurações automáticas de compartilhamento de pasta na rede via Samba
     - [ ]  Agger é importante que funcione, dependencia do dotnet452 é um problema
+    - [ ]  Verificar suporte do Kaspersky para Linux
+    - [ ]  Verificar suporte do Azure Information protection para confidencialidade
+    - [ ]  Onedrive CLI (sudo apt install onedrive) ou GUI [Isync](https://www.insynchq.com/pricing?utm_source=insync_app&utm_campaign=buy_upgrade)
     
     ## Teams
     

@@ -6,7 +6,7 @@ WINEPREFIX="/home/luko/.wine32" WINEARCH="win32" winetricks dotnet452 --force
 
 Baixar http://go.microsoft.com/fwlink/?linkid=328839&clcid=0x416
 
-WINEPREFIX="/home/luko/.wine32" WINEARCH="win32" wine NDP452-KB2901907-x86-x64-AllOS-PTB.exe
+WINEPREFIX="/home/luko/.wine32" WINEARCH="win32" /usr/lib/wine/wine NDP452-KB2901907-x86-x64-AllOS-PTB.exe
 
-WINEPREFIX="/home/luko/.wine32" WINEARCH="win32" wine Instalador-agger.exe
+WINEPREFIX="/home/luko/.wine32" WINEARCH="win32" /usr/lib/wine/wine Instalador-agger.exe
 

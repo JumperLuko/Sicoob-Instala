@@ -27,17 +27,17 @@ sudo apt upgrade
 # `samba e smbclient` são para realizar compartilhamento de arquivos na rede
 # `wine wine32:i386` é a camada de compatibilidade de apps Windows em 64b e 32b
 # `x11vnc` para acessar via vnc o desktop
-sudo apt install sssd-ad sssd-tools realmd adcli samba smbclient wine wine64 wine32:i386 winetricks x11vnc git git-gui mono-dbg libxtst6:i386 icedtea-netx openssh-server unattended-upgrades gdebi ntpdate
+sudo apt install sssd-ad sssd-tools realmd adcli samba smbclient wine wine64 wine32:i386 winetricks x11vnc git git-gui mono-dbg libxtst6:i386 icedtea-netx openssh-server unattended-upgrades gdebi ntpdate onedrive
 
 # Descomente isto caso queira reinstalar o Desktop
 #sudo apt install zorin-os-standard
 
 # WineHq atualizado para Ubuntu 20.04 based
-sudo dpkg --add-architecture i386 
-wget -nc https://dl.winehq.org/wine-builds/winehq.key
-sudo apt-key add winehq.key
-sudo add-apt-repository 'deb https://dl.winehq.org/wine-builds/ubuntu/ focal main' -u
-sudo apt install --install-recommends winehq-stable
+# sudo dpkg --add-architecture i386 
+# wget -nc https://dl.winehq.org/wine-builds/winehq.key
+# sudo apt-key add winehq.key
+# sudo add-apt-repository 'deb https://dl.winehq.org/wine-builds/ubuntu/ focal main' -u
+# sudo apt install --install-recommends winehq-stable
 
 # Automatic updates
 # https://www.blackmoreops.com/2021/10/28/how-to-configure-automatic-updates-in-ubuntu-server/
