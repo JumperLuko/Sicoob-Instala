@@ -25,6 +25,13 @@ sudo sh -c 'echo "deb http://deb.anydesk.com/ all main" > /etc/apt/sources.list.
 wget -O - https://download.teamviewer.com/download/linux/signature/TeamViewer2017.asc | sudo apt-key add -
 sudo apt-add-repository "deb http://linux.teamviewer.com/deb stable main"
 
+# Onedrive CLI
+sudo add-apt-repository ppa:yann1ck/onedrive -yn
+
+# Update and Install programs
+sudo apt update
+sudo apt install google-chrome-stable teams anydesk teamviewer onedrive
+
 # OnlyOffice
 if ! [ -e "$relativeDir/instaladores/onlyoffice-desktopeditors_amd64.deb" ]; then
     wget https://download.onlyoffice.com/install/desktop/editors/linux/onlyoffice-desktopeditors_amd64.deb -P $relativeDir/instaladores
@@ -41,7 +48,3 @@ sudo gdebi $relativeDir/instaladores/zoom_amd64.deb
 echo -e "\n\e[36mForticlient VPN\e[0m"
 echo "Download direto: https://links.fortinet.com/forticlient/deb/vpnagent"
 #echo "https://www.fortinet.com/support/product-downloads"
-
-# Update and Install programs
-sudo apt update
-sudo apt install google-chrome-stable teams anydesk teamviewer
