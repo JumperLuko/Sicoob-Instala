@@ -1,0 +1,10 @@
+=== Erro de atualização do sistema ===
+Caso na atualização gere erros parecidos ao abaixo, significa que o sistema está travado para uso pois algum programa já está fazendo o mesmo procedimento
+
+tecnologia@PC:~$ sudo apt update
+[sudo] senha para tecnologia:         
+Lendo listas de pacotes... Pronto
+E: Could not get lock /var/lib/apt/lists/lock. It is held by process 2889 (apt-get)
+N: Be aware that removing the lock file is not a solution and may break your system.
+E: Impossível criar acesso exclusivo ao directório /var/lib/apt/lists/
+

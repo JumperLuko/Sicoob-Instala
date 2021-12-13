@@ -1,21 +1,28 @@
 #!/bin/bash
 
-#| Mostrar sim ou não para funções
-sim_nao() {
-    while true; do
-        read -p "$* [s/n]: " sn
-        case $sn in
-            [Ss]*) sim_ou_no="sim" && return 0  ;;  
-            [Nn]*) printf "Cancelado\n\n" ; sim_ou_nao="nao" && return  1 ;;
-        esac
-        sim_ou_no="null"
-    done
-}
+# Carimbar arquivo de log
+timestamp=$(date +%Y-%m-%d_%H-%M-%S)
+echo "Basic packages OS & basic config: $timestamp" >> $HOME/Downloads/SicoobInstalado.log
+
+# Verificar caminhos das dependencias
+if [ "$scriptsDir" == "" ] && [ -e "./scripts/" ];then
+    scriptsDir=./scripts
+    relativeDir=.
+elif [ "$scriptsDir" == "" ];then
+    scriptsDir=.
+    relativeDir=..
+fi
+
+# Dependendencias
+source $scriptsDir/_GeneralFunctions.sh
 
 #! Tenho achar forma de verificar se o Firewall está bloqueando os repositórios e trocar automáticamente, ou abrir a janela para o administrador mudar os repositórios (e tbm infomar ele o que deve fazer)
 
 echo -e "Verifique se o \e[1;34mhorário do sistema\e[0m está correto e aperte enter"
 read
+
+# Clonar repositório Github
+source $scriptsDir/4-SicoobInstala-clone.sh
 
 # Atualizar corretamente os repositórios
 sudo apt update
@@ -52,12 +59,6 @@ sudo pam-auth-update --enable mkhomedir
 # Gerenciador de login em xorg, para permitir acesso remoto
 sudo sed -i -e 's/# WaylandEnable=false/WaylandEnable=false/' /etc/gdm3/custom.conf
 
-# Configurar hostname
-#! Colocar um prompt para confirmar o reboot com sim e não
-echo "Por favor defina o nome da maquina, no bloco de notas que abrirá"
-sleep 5
-sudo gedit /etc/hostname
-
 # Disable scroll lock (bug de travamento com teclas de funções no teclado BR)
 sudo sed -i -e 's/    modifier_map Mod3   { Scroll_Lock };/    #modifier_map Mod3   { Scroll_Lock };/' /usr/share/X11/xkb/symbols/br
 
@@ -66,17 +67,11 @@ sudo sed -i -e 's/    modifier_map Mod3   { Scroll_Lock };/    #modifier_map Mod
 #sudo adduser administrador
 #sudo adduser administrador sudo
 
-echo "Senha para root"
-sudo passwd root
-
-# reboot?
-echo "Deseja reiniciar?"
-echo "é recomendado para implementar o nome da maquina"
+echo -e "\nAlterar \e[34msenha de root\e[0m?"
 sim_nao;if [ "$sim_ou_nao" == "sim" ];then
-    unset sim_ou_nao;echo "Reiniciando...";reboot
-elif [ "$sim_ou_nao" == "nao" ];then
-    unset sim_ou_nao;
-    echo "Sem reboot"
+    sudo passwd root
 fi
+
+source $scriptsDir/1-hostname.sh
 
 echo "Configuração finalizada!"

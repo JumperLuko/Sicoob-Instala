@@ -9,7 +9,7 @@ sim_nao() {
             [Ss]*) sim_ou_nao="sim" && return 0 ;;  
             [Nn]*) sim_ou_nao="nao" && return 1 ;;
         esac
-        sim_ou_no="null"
+        sim_ou_nao="null"
     done
 }
 
@@ -41,7 +41,7 @@ sim_nao_canc() {
             [Nn]*) sim_ou_nao="nao" && return 1 ;;
             [Cc]*) sim_ou_nao="cancelar" && exit ;;
         esac
-        sim_ou_no="null"
+        sim_ou_nao="null"
     done
 }
 
@@ -69,4 +69,15 @@ encerra_execucao() {
     echo "este programa encerrará a execução"
     sleep 5
     exit
+}
+
+# reboot?
+reiniciar() {
+    echo -e "\nDeseja \e[34mreiniciar\e[0m?"
+    echo "$1"
+    sim_nao;if [ "$sim_ou_nao" == "sim" ];then
+        echo "Reiniciando...";reboot
+    elif [ "$sim_ou_nao" == "nao" ];then
+        echo "Sem reboot"
+    fi
 }

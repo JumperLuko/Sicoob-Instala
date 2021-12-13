@@ -12,6 +12,7 @@ fi
 sudo echo ""
 
 # Criar arquivo com senha vnc + permissão de leitura
+sudo mkdir /opt/sicoob/
 echo "Por favor digite a senha VNC"
 sudo x11vnc -storepasswd /opt/sicoob/passwdvnc.pwd
 sudo chmod +444 /opt/sicoob/passwdvnc.pwd
