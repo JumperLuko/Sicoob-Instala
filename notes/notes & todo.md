@@ -23,6 +23,10 @@ jumperluko.github.io
     - [ ]  Autenticadora de cheque Panini funcionar minimamente?
         - [ ]  Drivers que temos é para windows, mas tem pra linux?
         - [ ]  A empresa fornece drivers, mas tem que contatar de maneira empresarial e eles falam ingles e parece que são do EUA
+    - [x]  Colocar opção dedicada para alterar nome da maquina
+    - [x]  Baixar copia do sicoob instala para /opt/sicoob
+        - [x]  Verificar se existe arquivo e fazer condições
+        - [x]  git pull
     
 - Correções
     - [x]  .desktop do Gercoop que roda em local especifo com Path=
