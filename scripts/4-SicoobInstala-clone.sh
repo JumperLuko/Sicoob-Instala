@@ -8,7 +8,7 @@ fi
 
 # Atualizar arquivos
 if ! [ -d "/opt/sicoob/Sicoob-Instala" ]; then
-    Clonando repositório
+    echo "Clonando repositório"
     sudo git clone https://github.com/JumperLuko/Sicoob-Instala.git /opt/sicoob/Sicoob-Instala
 elif [ -d "/opt/sicoob/Sicoob-Instala" ]; then
     (cd /opt/sicoob/Sicoob-Instala && sudo git pull)
