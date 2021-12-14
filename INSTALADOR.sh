@@ -26,6 +26,7 @@ echo -e "\e[34m6\e[0m -  Configurar VNC"
 echo -e "\e[34m7\e[0m -  Instalar Caixa (+java i586)"
 echo -e "\e[34m8\e[0m -  Instalar Sicoob Empresarial (instalação dentro do usuário)"
 echo -e "\e[34m9\e[0m -  Alterar nome da maquina"
+echo -e "\e[34m10\e[0m - Configurar Onedrive (Melhorias a serem feitas)"
 echo -e "\e[34m99\e[0m - Desinstalar Programas"
 
 echo ""
@@ -68,6 +69,9 @@ while true; do
             break;;
         9)
             $scriptsDir/1-hostname.sh
+            break;;
+        10)
+            $scriptsDir/4-onedrive-config.sh
             break;;
         99)
             unset opcao

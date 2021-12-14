@@ -1,5 +1,7 @@
 #https://github.com/skilion/onedrive
 
+onedrive
+
 # Copiar arquivo de configuração padrão
 cp /usr/share/doc/onedrive/config ~/.config/onedrive/config
 
