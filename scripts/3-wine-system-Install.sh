@@ -2,7 +2,7 @@
 
 # Carimbar arquivo de log
 timestamp=$(date +%Y-%m-%d_%H-%M-%S)
-echo "wine-system-install: $timestamp" >> $HOME/Downloads/SicoobInstalado.log
+echo "wine-system-install: $timestamp" >> $HOME/Downloads/SicoobInstala.log
 
 # Verificar caminhos das dependencias
 if [ "$scriptsDir" == "" ] && [ -e "./scripts/" ];then

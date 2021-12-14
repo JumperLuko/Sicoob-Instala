@@ -12,7 +12,7 @@ fi
 echo "Instalando Sicoob Empresarial"
 echo -e "\e[1;5;34mInstale em \e[0m/home/PastaDoUsuario/Sicoobnet"
 sleep 3
-javaws $relativeDir/instaladores/InstaladorLegadoSicoobnetEmpresarial.jnlp >> $HOME/Downloads/SicoobInstalado.log
+javaws $relativeDir/instaladores/InstaladorLegadoSicoobnetEmpresarial.jnlp >> $HOME/Downloads/SicoobInstala.log
 
 echo "Gerando atalhos e icones"
 cp $relativeDir/scripts/sicoobnet.sh $HOME/Sicoobnet/

@@ -1,5 +1,11 @@
 #!/bin/bash
 
+timestamp () {
+    # Carimbar arquivo de log
+    timestampNow=$(date +%Y-%m-%d_%H-%M-%S)
+    echo "$1 $timestampNow" >> $HOME/Downloads/SicoobInstala.log
+}
+
 # Mostrar sim ou não para funções
 sim_nao() {
     unset sim_ou_nao;
