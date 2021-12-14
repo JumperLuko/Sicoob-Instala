@@ -36,3 +36,4 @@ nano ~/.config/onedrive/config
 systemctl --user enable onedrive
 systemctl --user start onedrive
 
+#journalctl --user-unit onedrive -f
