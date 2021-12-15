@@ -44,6 +44,13 @@ if ! [ -e "$relativeDir/instaladores/zoom_amd64.deb" ]; then
 fi
 sudo gdebi $relativeDir/instaladores/zoom_amd64.deb
 
+# Adobe Reader
+wget ftp://ftp.adobe.com/pub/adobe/reader/unix/9.x/9.5.5/enu/AdbeRdr9.5.5-1_i386linux_enu.deb -P $relativeDir/instaladores
+sudo dpkg --add-architecture i386
+sudo apt update
+sudo apt install libxml2:i386 libcanberra-gtk-module:i386 gtk2-engines-murrine:i386 libatk-adaptor:i386
+sudo dpkg -i $relativeDir/instaladores/AdbeRdr9.5.5-1_i386linux_enu.deb
+
 # Forticlient VPN
 echo -e "\n\e[36mForticlient VPN\e[0m"
 echo "Download direto: https://links.fortinet.com/forticlient/deb/vpnagent"
