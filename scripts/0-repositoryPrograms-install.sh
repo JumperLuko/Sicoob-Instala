@@ -32,11 +32,12 @@ sudo add-apt-repository ppa:yann1ck/onedrive -yn
 sudo apt update
 sudo apt install google-chrome-stable teams anydesk teamviewer onedrive
 
-# OnlyOffice
-if ! [ -e "$relativeDir/instaladores/onlyoffice-desktopeditors_amd64.deb" ]; then
-    wget https://download.onlyoffice.com/install/desktop/editors/linux/onlyoffice-desktopeditors_amd64.deb -P $relativeDir/instaladores
-fi
-sudo gdebi $relativeDir/instaladores/onlyoffice-desktopeditors_amd64.deb
+# # OnlyOffice
+# # adiciona via flatpak já
+# if ! [ -e "$relativeDir/instaladores/onlyoffice-desktopeditors_amd64.deb" ]; then
+#     wget https://download.onlyoffice.com/install/desktop/editors/linux/onlyoffice-desktopeditors_amd64.deb -P $relativeDir/instaladores
+# fi
+# sudo gdebi $relativeDir/instaladores/onlyoffice-desktopeditors_amd64.deb
 
 # Zoom meeting
 if ! [ -e "$relativeDir/instaladores/zoom_amd64.deb" ]; then

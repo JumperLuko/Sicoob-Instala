@@ -32,9 +32,33 @@ sudo apt upgrade
 # obs: não terá -y, pois por segurança é para o administrador checar se os pacotes serão instalados sem quebrar algo. Estamos lidando com componente que deve ser sólido, o sistema, então a checagem é importante!
 # `sssd-ad sssd-tools reamd adcli` para instalar o AD
 # `samba e smbclient` são para realizar compartilhamento de arquivos na rede
-# `wine wine32:i386` é a camada de compatibilidade de apps Windows em 64b e 32b
+# `wine wine64 wine32:i386 winetricks mono-dbg` é a camada de compatibilidade de apps Windows em 64b e 32b
 # `x11vnc` para acessar via vnc o desktop
-sudo apt install sssd-ad sssd-tools realmd adcli samba smbclient wine wine64 wine32:i386 winetricks x11vnc git git-gui mono-dbg libxtst6:i386 icedtea-netx openssh-server unattended-upgrades gdebi ntpdate
+# `libxtst6:i386` para biblioteca java do caixa
+# `icedtea-netx` para instalar o Sicobnet Empresarial
+# `openssh-server` para cesso externo via linha de comando
+# `gdebi` para instala pacotes deb
+# `ntpdate` ferramenta para verificar se o horário do PC está sincronizado com a internet
+
+sudo apt install sssd-ad sssd-tools realmd adcli samba smbclient wine wine64 wine32:i386 winetricks mono-dbg x11vnc git git-gui libxtst6:i386 icedtea-netx openssh-server unattended-upgrades gdebi ntpdate -y
+
+# Instalar Pacotes Flatpaks
+# `pdfarranger` para organizar paginas de PDF
+# `onlyoffice` para suite office
+sudo flatpak install flathub com.github.jeromerobert.pdfarranger org.onlyoffice.desktopeditors -y
+# Extras porém relevantes
+sudo flatpak install flathub io.bit3.WhatsAppQT org.telegram.desktop com.bitstower.Markets com.github.hugolabe.Wike com.github.gi_lom.dialect org.gabmus.whatip org.gnome.BreakTimer com.belmoussaoui.Decoder com.belmoussaoui.Obfuscate -y
+
+# Flatpak atualizar automáticamente
+# https://www.jwillikers.com/automate-flatpak-updates-with-systemd
+sudo cp $scriptsDir/services/update-system-flatpaks.service /etc/systemd/system/
+sudo cp $scriptsDir/services/update-system-flatpaks.timer /etc/systemd/system/
+sudo systemctl --system enable --now update-system-flatpaks.timer
+
+# APT atualizar automáticamente
+# sudo cp $scriptsDir/services/apt-upgrade-force.service /etc/systemd/system/
+# sudo cp $scriptsDir/services/apt-upgrade-force.timer /etc/systemd/system/
+# sudo systemctl --system enable --now apt-upgrade-force.timer
 
 # Descomente isto caso queira reinstalar o Desktop
 #sudo apt install zorin-os-standard

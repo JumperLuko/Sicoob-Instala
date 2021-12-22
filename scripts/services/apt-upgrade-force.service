@@ -1,0 +1,11 @@
+[Unit]
+Description=Upgrade system and force
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Type=oneshot
+ExecStart=apt upgrade -y
+
+[Install]
+WantedBy=multi-user.target

@@ -35,7 +35,7 @@ read -p "Digite o numero da opção que deseja: " opcao
 while true; do
     case $opcao in
         0) 
-            $scriptsDir/01-basicsPackages_OS+basicConfig.sh
+            $scriptsDir/014-basicsPackages_OS+basicConfig.sh
             $scriptsDir/1-configAD.sh
             $scriptsDir/3-SisBr-all.sh
             $scriptsDir/3-Gercoop-system-install.sh
@@ -44,7 +44,7 @@ while true; do
             $scriptsDir/4-SicoobEmpresarial-install.sh
             break;;
         1) 
-            $scriptsDir/01-basicsPackages_OS+basicConfig.sh
+            $scriptsDir/014-basicsPackages_OS+basicConfig.sh
             break;;
         2)
             $scriptsDir/0-repositoryPrograms-install.sh
