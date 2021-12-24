@@ -19,20 +19,23 @@ source $scriptsDir/_GeneralFunctions.sh
 # Diretórios
 sicoobFolder="/opt/sicoob/"
 wineFolder="/opt/sicoob/wine/"
+wine32Folder="/opt/sicoob/wine32/"
 instaladoresFolder="/opt/sicoob/instaladores/"
 runFolder="/opt/sicoob/run/"
 instaladoresLocal="$relativeDir/instaladores/"
 
 # Criando diretórios
 echo "Gerando pastas"
-sudo mkdir "$sicoobFolder" 2>> $HOME/Downloads/SicoobInstalado.log
-sudo mkdir "$wineFolder" 2>> $HOME/Downloads/SicoobInstalado.log
-sudo mkdir "$instaladoresFolder" 2>> $HOME/Downloads/SicoobInstalado.log
-sudo mkdir "$runFolder" 2>> $HOME/Downloads/SicoobInstalado.log
+sudo mkdir "$sicoobFolder" 2>> $HOME/Downloads/SicoobInstala.log
+sudo mkdir "$wineFolder" 2>> $HOME/Downloads/SicoobInstala.log
+sudo mkdir "$wine32Folder" 2>> $HOME/Downloads/SicoobInstala.log
+sudo mkdir "$instaladoresFolder" 2>> $HOME/Downloads/SicoobInstala.log
+sudo mkdir "$runFolder" 2>> $HOME/Downloads/SicoobInstala.log
 
 # Gerando diretórios do wine
 echo "Gerando diretórios do wine em $wineFolder"
-sudo WINEPREFIX="$wineFolder" wine wineboot 2>> $HOME/Downloads/SicoobInstalado.log
+sudo WINEPREFIX="$wineFolder" wine wineboot 2>> $HOME/Downloads/SicoobInstala.log
+sudo WINEPREFIX="$wine32Folder" WINEARCH="win32" wineboot>> $HOME/Downloads/SicoobInstala.log
 
 # Verificando se existe o arquivo do instalador na pasta local ou no sistema
 verificaInstalador(){
@@ -85,6 +88,20 @@ verificaInstalaWine(){
         echo -e "\nJá existe instalação do $2, cancelar instalação?"
         sim_nao;if [ "$sim_ou_nao" == "nao" ]; then
             sudo WINEPREFIX="$wineFolder" wine "$instaladoresFolder$2" 2>> $HOME/Downloads/SicoobInstalado.log
+        fi;
+    else
+        echo "Erro inesperado ao verificar instalação do $2"
+    fi
+}
+
+verificaInstalaWine32(){
+    if ! [ -e "$wine32Folder""$1" ]; then
+        echo "Instalando $2" ;
+        sudo WINEPREFIX="$wine32Folder" wine "$instaladoresFolder$2" 2>> $HOME/Downloads/SicoobInstalado.log
+    elif [ -e "$wine32Folder""$1" ]; then
+        echo -e "\nJá existe instalação do $2, cancelar instalação?"
+        sim_nao;if [ "$sim_ou_nao" == "nao" ]; then
+            sudo WINEPREFIX="$wine32Folder" wine "$instaladoresFolder$2" 2>> $HOME/Downloads/SicoobInstalado.log
         fi;
     else
         echo "Erro inesperado ao verificar instalação do $2"
