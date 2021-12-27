@@ -1,0 +1,9 @@
+[Desktop Entry]
+Name=Aggilizador
+Exec=env WINEPREFIX="/opt/sicoob/wine32/" wine C:\\\\AggerSeguros\\\\Aggilizador.Application.exe 
+Type=Application
+StartupNotify=true
+Comment=Aggilizador de Cálculos
+Icon=B81C_Aggilizador.Application.0
+StartupWMClass=aggilizador.application.exe
+Keywords=Sicoob;cooperativa;cálculos;Agger;

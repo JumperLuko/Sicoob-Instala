@@ -40,7 +40,7 @@ sudo apt upgrade
 # `gdebi` para instala pacotes deb
 # `ntpdate` ferramenta para verificar se o horário do PC está sincronizado com a internet
 
-sudo apt install sssd-ad sssd-tools realmd adcli samba smbclient wine wine64 wine32:i386 winetricks mono-dbg x11vnc git git-gui libxtst6:i386 icedtea-netx openssh-server unattended-upgrades gdebi ntpdate -y
+sudo apt install sssd-ad sssd-tools realmd adcli samba smbclient wine wine64 wine32:i386 winetricks mono-dbg x11vnc git git-gui libxtst6:i386 icedtea-netx openssh-server unattended-upgrades gdebi ntpdate ttf-mscorefonts-installer winbind -y
 
 # Instalar Pacotes Flatpaks
 # `pdfarranger` para organizar paginas de PDF
