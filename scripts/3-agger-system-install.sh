@@ -33,6 +33,7 @@ verificaInstalador "$Agger"
 echo "Copiando executavel SH do Agger"
 sudo cp "$relativeDir/desktop/run/Agger.sh" /opt/sicoob/run/
 sudo chmod +x "/opt/sicoob/run/Agger.sh"
+sudo ln -s /opt/sicoob/run/Agger.sh /usr/bin/agger
 
 # Instalar dotNet452_PTB na pasta do sistema (precaução)
 # verificaInstalaWine32 "drive_c/windows/Microsoft.NET/Framework/v4.0.30319/Microsoft.Windows.ApplicationServer.Applications.45.man" "$dotNet452_PTB"

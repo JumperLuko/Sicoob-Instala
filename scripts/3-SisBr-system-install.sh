@@ -26,6 +26,12 @@ verificaInstalaWine "drive_c/Program Files (x86)/Adobe/Flash Player/AddIns/airap
 # Instalar SisBR
 verificaInstalaWine "drive_c/Sisbr 2.0/Sisbr 2.0.exe" "$SisBr"
 
+# Copia executavel do SisBr
+echo "Copiando executavel SH do SisBr"
+sudo cp "$relativeDir/desktop/run/SisBr.sh" /opt/sicoob/run/
+sudo chmod +x "/opt/sicoob/run/SisBr.sh"
+sudo ln -s /opt/sicoob/run/SisBr.sh /usr/bin/sisbr
+
 #! Copiar .desktop
 echo "Copiando arquivo .desktop"
 sudo cp $relativeDir/desktop/Sisbr_2.0.desktop /usr/share/applications/

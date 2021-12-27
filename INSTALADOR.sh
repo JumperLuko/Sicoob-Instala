@@ -3,7 +3,7 @@
 
 # Carimbar arquivo de log
 timestamp=$(date +%Y-%m-%d_%H-%M-%S)
-echo -e "\n\nInstalador: $timestamp" >> $HOME/Downloads/SicoobInstalado.log
+echo -e "\n\nInstalador: $timestamp" >> $HOME/Downloads/SicoobInstala.log
 
 scriptsDir=./scripts
 

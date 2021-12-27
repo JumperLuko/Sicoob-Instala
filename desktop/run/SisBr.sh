@@ -2,11 +2,6 @@
 
 #! Se não houver instalação informar o usuário e abrir arquivo do instalador do adobe. Também criar arquivo desktop para realizar instalação, assim que terminado apagar ele
 
-# Gerar repositório do wine
-#! Depois isso será movimentado para uma verificação geral, não só do SisBR
-#sleep 10
-#wine wineboot &
-
 adobeAIR=AdobeAIRInstaller.exe
 instaladorPasta="/opt/sicoob/instaladores"
 
@@ -24,5 +19,7 @@ elif [ -e "$instaladorPasta"/"$adobeAIR" ] && ! [ -e ".wine/drive_c/Program File
 elif ! [ -e "$HOME/.wine/drive_c/windows/Fonts/corefonts.installed" ]; then
     sleep 5 && gnome-terminal -- bash -c 'echo -e "Aperte enter para Instalar \e[5;1;32mdependencia do SisBR\e[0m (Fontes)" && read && winetricks corefonts' &
 fi
+
+wine /opt/sicoob/wine/drive_c/Sisbr\ 2.0/Sisbr\ 2.0.exe
 
 unset adobeAIR instaladorPasta
