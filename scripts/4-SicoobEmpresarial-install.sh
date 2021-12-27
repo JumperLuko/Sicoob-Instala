@@ -15,7 +15,7 @@ sleep 3
 javaws $relativeDir/instaladores/InstaladorLegadoSicoobnetEmpresarial.jnlp >> $HOME/Downloads/SicoobInstala.log
 
 echo "Gerando atalhos e icones"
-cp $relativeDir/scripts/sicoobnet.sh $HOME/Sicoobnet/
+cp $relativeDir/desktop/run/sicoobnet.sh $HOME/Sicoobnet/
 chmod +x $HOME/Sicoobnet/sicoobnet.sh
 cp $relativeDir/desktop/sicoob-empresarial.desktop $HOME/.local/share/applications/
 sed -i -e "s/someUser/$USER/" $HOME/.local/share/applications/sicoob-empresarial.desktop

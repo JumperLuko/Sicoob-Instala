@@ -25,7 +25,7 @@ verificaInstalaWine "drive_c/GerCoop/GerCoop.exe" "$Gercoop"
 
 # Copia executavel do Gercoop
 echo "Copiando executavel SH do Gercoop"
-sudo cp "$relativeDir/desktop/Gercoop.sh" /opt/sicoob/run/
+sudo cp "$relativeDir/desktop/run/Gercoop.sh" /opt/sicoob/run/
 sudo chmod +x "/opt/sicoob/run/Gercoop.sh"
 
 #! Copiar .desktop

@@ -1,6 +1,6 @@
 [Desktop Entry]
 Name=Aggilizador
-Exec=env WINEPREFIX="/opt/sicoob/wine32/" wine C:\\\\AggerSeguros\\\\Aggilizador.Application.exe 
+Exec=/opt/sicoob/run/Agger.sh
 Type=Application
 StartupNotify=true
 Comment=Aggilizador de Cálculos

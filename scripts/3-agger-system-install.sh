@@ -16,27 +16,29 @@ source $scriptsDir/3-wine-system-Install.sh
 dotNet452_PTB=NDP452-KB2901907-x86-x64-AllOS-PTB.exe
 Agger=Instalador-agger.exe
 
-# sudo mkdir $wine32Folder
-# sudo WINEPREFIX="$wine32Folder" WINEARCH="win32" wineboot
-sudo WINEPREFIX="$wine32Folder" WINEARCH="win32" winetricks win7
-sudo WINEPREFIX="$wine32Folder" WINEARCH="win32" winetricks dotnet452
-sudo WINEPREFIX="$wine32Folder" WINEARCH="win32" winetricks win7
+# sudo WINEPREFIX="$wine32Folder" WINEARCH="win32" winetricks dotnet452
+# sudo WINEPREFIX="$wine32Folder" WINEARCH="win32" winetricks win7
 
 echo "Baixar http://go.microsoft.com/fwlink/?linkid=328839&clcid=0x416"
 read -p 'enter para continuar'
 
-sudo WINEPREFIX="$wine32Folder" WINEARCH="win32" wine $dotNet452_PTB
-sudo WINEPREFIX="$wine32Folder" WINEARCH="win32" wine $Agger
+# sudo WINEPREFIX="$wine32Folder" WINEARCH="win32" wine $dotNet452_PTB
+# sudo WINEPREFIX="$wine32Folder" WINEARCH="win32" wine $Agger
 
 # Verificando se existe instaçador do dotNet452_PTB e Agger
 verificaInstalador "$dotNet452_PTB"
 verificaInstalador "$Agger"
 
+# Copia executavel do Agger
+echo "Copiando executavel SH do Agger"
+sudo cp "$relativeDir/desktop/run/Agger.sh" /opt/sicoob/run/
+sudo chmod +x "/opt/sicoob/run/Agger.sh"
+
 # Instalar dotNet452_PTB na pasta do sistema (precaução)
-verificaInstalaWine32 "drive_c/windows/Microsoft.NET/Framework/v4.0.30319/Microsoft.Windows.ApplicationServer.Applications.45.man" "$dotNet452_PTB"
+# verificaInstalaWine32 "drive_c/windows/Microsoft.NET/Framework/v4.0.30319/Microsoft.Windows.ApplicationServer.Applications.45.man" "$dotNet452_PTB"
 
 # Instalar Agger
-verificaInstalaWine32 "drive_c/AggerSeguros/Aggilizador.Application.exe" "$Agger"
+# verificaInstalaWine32 "drive_c/AggerSeguros/Aggilizador.Application.exe" "$Agger"
 
 #! Copiar .desktop
 echo "Copiando arquivo .desktop"
@@ -47,4 +49,4 @@ echo "Inserindo icones do programa no sistema"
 sudo cp -r $relativeDir/desktop/hicolor/* /usr/share/icons/hicolor/
 
 # # Permissão para todos editarem
-addPerm777 "$wineFolder32""" "Agger"
+# addPerm777 "$wineFolder32""drive_c/AggerSeguros/" "Agger"
