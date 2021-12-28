@@ -23,4 +23,8 @@ else
     env WINEPREFIX="$HOME/.wine32/" WINEARCH="win32" wine $HOME/.wine32/drive_c/AggerSeguros/Aggilizador.Application.exe
 fi
 
+if ! [ -e "$wine32Folder/drive_c/windows/Fonts/corefonts.installed" ]; then
+    env WINEPREFIX="$wine32Folder" WINEARCH="win32" winetricks corefonts
+fi
+
 unset dotNet452_PTB instaladorPasta wine32Folder dotnet452Instalado dotnet452PTBRInstalado
