@@ -14,7 +14,6 @@ if [ -e "$instaladorPasta"/"$dotNet452_PTB" ] && ! [ -e "$dotnet452Instalado" ] 
     gnome-terminal -- bash -c 'dotNet452_PTB=NDP452-KB2901907-x86-x64-AllOS-PTB.exe && instaladorPasta="/opt/sicoob/instaladores" && wine32Folder="$HOME/.wine32/" &&\
  echo -e "Aperte enter para Instalar \e[5;1;32mAgger e dependencias\e[0m (Dotnet 452 e tradução)" && read &&\
  env WINEPREFIX="$wine32Folder" WINEARCH="win32" wineboot 2>> $HOME/Downloads/SicoobInstala.log &&\
- env WINEPREFIX="$wine32Folder" WINEARCH="win32" winetricks corefonts &\
  WINEPREFIX="$wine32Folder" WINEARCH="win32" winetricks dotnet452 2>> $HOME/Downloads/SicoobInstala.log &&\
  WINEPREFIX="$wine32Folder" WINEARCH="win32" winetricks win7 &&\
  env WINEPREFIX="$wine32Folder" WINEARCH="win32" wine "$instaladorPasta"/"$dotNet452_PTB" 2>> $HOME/Downloads/SicoobInstala.log &&\
