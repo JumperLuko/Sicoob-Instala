@@ -37,19 +37,18 @@ jumperluko.github.io
         - [x]  Redirecionar os programas de wine
         - [x]  Colocar os avisos de wine para esta pasta
         - [x]  Colocar o Caixa
-    - [ ]  Criar pra .desktop para Sicoob Empresarial
+    - [x]  Criar pra .desktop para Sicoob Empresarial
         - [x]  Qual será o lugar correto para instalar? na /home do usuário!
-        - [ ]  Como o tecnico instalará no lugar correto?
-        - [ ]  Como eu encontrarei o lugar correto?
+        - [x]  Como o tecnico instalará no lugar correto? O script já coloca diretamente para /opt/sicoob/Sicoob-Instala
+        - [x]  Como eu encontrarei o lugar correto?
     - [ ]  Verificar quais servidores tem que realizar liberação
-        - [ ]  Criar anotações pra equipe
+        - [x]  Criar anotações pra equipe
         - [ ]  verificar boa parte pelo winetricks
-        - [ ]  
+    - [x]  Na primeira instalação do AD colocar arquivo padrão de configuração, pois ele normalmente não gera arquivo se reiniciar o PC após ativar. Só tinha que colocar depois de logar no AD
 - Categorias
     
     ## Gerais
     
-    - [ ]  Primeira abertura do usuário exibir zorin-appearance
     - [ ]  Opção de colocar swap file, e pergunta quantos GB de swal
         - [ ]  Outra que permite apagar swapfile
     
