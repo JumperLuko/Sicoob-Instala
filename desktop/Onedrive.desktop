@@ -1,0 +1,9 @@
+[Desktop Entry]
+Name=Onedrive
+Exec=/opt/sicoob/run/Onedrive.sh
+Type=Application
+StartupNotify=true
+Comment=Aggilizador de Cálculos
+Icon=/usr/share/icons/hicolor/scalable/apps/onedrive.svg
+Terminal=true
+Keywords=Onedrive;Cloud;Microsoft;Nuvem;

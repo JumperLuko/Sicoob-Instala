@@ -26,6 +26,10 @@ Simples assim, tudo será exibido no terminal.
 
 4. Instalação de pacotes Isolados, tais como, Flatpak, Snap, Appimage, Java ou SH sem permissão elevada (costumam não alterar o sistema)
 
+# User case atual
+- Computadores de atendimento, este possui todas as aplicações necessárias operantes
+
 # Desafios atuais
-- Driver da digitalizadora de cheque para Linux
-- Agger e o dotnet452
+- Driver da digitalizadora de cheque para Linux (Caixa)
+- Autenticadora da impressora ser reconhecida (Caixa)
+- Pinpad criptografado ser reconhecido (Caixa)

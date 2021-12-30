@@ -1,17 +1,3 @@
-NÃO FUNCIONA COM ROOT
-(melhor rodar script ao iniciar sessão para instalar automático)
-
-# Instalar adobeAIR para SisBR
-sudo WINEPREFIX=/opt/wine/ wine 1-Sicoob/winetricks/adobeair/AdobeAIRInstaller.exe
-
-# Instalar SisBR
-sudo WINEPREFIX=/opt/wine/ wine 1-Sicoob/Sisbr20.exe
-
-
-
-xxxxxxxxxxx
-xxxxxxxxxxx
-
 # === === ===
 # Locais Uteis
 

@@ -21,12 +21,16 @@ source $scriptsDir/_GeneralFunctions.sh
 echo -e "Verifique se o \e[1;34mhorário do sistema\e[0m está correto e aperte enter"
 read
 
+#! Copiar .desktop
+echo "Copiando arquivo .desktop do Sicoob Instala"
+sudo cp $relativeDir/desktop/Sicoob-Instala.desktop /usr/share/applications/
+
 # Clonar repositório Github
 source $scriptsDir/4-SicoobInstala-clone.sh
 
 # Atualizar corretamente os repositórios
 sudo apt update
-sudo apt upgrade
+sudo apt upgrade -y
 
 # Instalar pacotes básicos
 # obs: não terá -y, pois por segurança é para o administrador checar se os pacotes serão instalados sem quebrar algo. Estamos lidando com componente que deve ser sólido, o sistema, então a checagem é importante!
@@ -40,8 +44,26 @@ sudo apt upgrade
 # `gdebi` para instala pacotes deb
 # `ntpdate` ferramenta para verificar se o horário do PC está sincronizado com a internet
 # `menulibre` Para icones no sistema funcionarem. !Algo sem isso não está deixando os icones funcionarem
+sudo apt install sssd-ad sssd-tools realmd adcli samba smbclient wine wine64 wine32:i386 winetricks mono-dbg x11vnc git git-gui libxtst6:i386 icedtea-netx openssh-server unattended-upgrades gdebi ntpdate ttf-mscorefonts-installer winbind menulibre fallocate -y
 
-sudo apt install sssd-ad sssd-tools realmd adcli samba smbclient wine wine64 wine32:i386 winetricks mono-dbg x11vnc git git-gui libxtst6:i386 icedtea-netx openssh-server unattended-upgrades gdebi ntpdate ttf-mscorefonts-installer winbind menulibre -y
+# Clonar repositório Github, novamente caso o pacote não tenha sido instalado antes
+source $scriptsDir/4-SicoobInstala-clone.sh
+
+if [ -e "/usr/bin/onedrive" ]; then
+    # Copia executavel do Onedrive
+    echo "Copiando executavel SH do Onedrive"
+    sudo cp "$relativeDir/desktop/run/Onedrive.sh" /opt/sicoob/run/
+    sudo chmod +x "/opt/sicoob/run/Onedrive.sh"
+    sudo ln -s /opt/sicoob/run/Onedrive.sh /usr/bin/onedrive-prompt
+
+    #! Copiar .desktop
+    echo "Copiando arquivo .desktop"
+    sudo cp $relativeDir/desktop/Onedrive.desktop /usr/share/applications/
+
+    # Copiar icones para o sistema
+    echo "Inserindo icones do programa no sistema"
+    sudo cp -r $relativeDir/desktop/hicolor/* /usr/share/icons/hicolor/
+fi
 
 # Instalar Pacotes Flatpaks
 # `pdfarranger` para organizar paginas de PDF

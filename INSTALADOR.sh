@@ -24,10 +24,11 @@ echo -e "\e[34m4\e[0m -  Instalar SisBR"
 echo -e "\e[34m5\e[0m -  Instalar Gercoop"
 echo -e "\e[34m6\e[0m -  Configurar VNC"
 echo -e "\e[34m7\e[0m -  Instalar Caixa (+java i586)"
-echo -e "\e[34m8\e[0m -  Instalar Sicoob Empresarial (instalação dentro do usuário)"
-echo -e "\e[34m9\e[0m -  Instalar Agger (experimental)"
+echo -e "\e[34m8\e[0m -  Instalar Sicoob Empresarial (na pasta do usuário)"
+echo -e "\e[34m9\e[0m -  Instalar Agger"
 echo -e "\e[34m10\e[0m - Alterar nome da maquina"
-echo -e "\e[34m11\e[0m - Configurar Onedrive (Melhorias a serem feitas)"
+echo -e "\e[34m11\e[0m - Configurar Swap File do PC"
+echo -e "\e[34m12\e[0m - Configurar Onedrive"
 echo -e "\e[34m99\e[0m - Desinstalar Programas"
 
 echo ""
@@ -44,6 +45,7 @@ while true; do
             $scriptsDir/4-Caixa-install.sh
             $scriptsDir/4-SicoobEmpresarial-install.sh
             $scriptsDir/3-agger-system-install.sh
+            $scriptsDir/1-swapfile.sh
             $scriptsDir/4-onedrive-config.sh
             break;;
         1) 
@@ -77,6 +79,9 @@ while true; do
             $scriptsDir/1-hostname.sh
             break;;
         11)
+            $scriptsDir/1-swapfile.sh
+            break;;
+        12)
             $scriptsDir/4-onedrive-config.sh
             break;;
         99)
