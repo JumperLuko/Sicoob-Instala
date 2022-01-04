@@ -51,22 +51,22 @@ verificaInstalador(){
         sleep 10
     }
     
-    if [ -e "$instaladoresLocal" ] && ! [ -e "$instaladoresFolder$1" ]; then
+    if [ -e "$instaladoresLocal$1" ] && ! [ -e "$instaladoresFolder$1" ]; then
         copia_instalador
-    elif [ -e "$instaladoresLocal" ] && [ -e "$instaladoresFolder$1" ]; then
+    elif [ -e "$instaladoresLocal$1" ] && [ -e "$instaladoresFolder$1" ]; then
         echo "Instalador $1 já existe em $instaladoresFolder, deseja sobrescrever?"
         sim_nao;if [ "$sim_ou_nao" == "sim" ];then
             copia_instalador
         fi;
-    elif ! [ -e "$instaladoresLocal" ] && [ -e "$instaladoresFolder$1" ]; then
+    elif ! [ -e "$instaladoresLocal$1" ] && [ -e "$instaladoresFolder$1" ]; then
         echo -e "\n\nNão existe instalador com nome $1 na pasta 'instaladores', porém existe no sistema e será usada esta"
-    elif ! [ -e "$instaladoresLocal" ] && ! [ -e "$instaladoresFolder$1" ]; then
+    elif ! [ -e "$instaladoresLocal$1" ] && ! [ -e "$instaladoresFolder$1" ]; then
         echo -e "\e[31mnão existe instaladores do $1 na pasta 'instaladores', por favor jogue um arquivo nessa pasta com nome\e[0m\e[1;31m $1 e digite sim\e[0m"
-        while ! [ -e "$instaladoresLocal" ]; do
+        while ! [ -e "$instaladoresLocal$1" ]; do
             sim_nao_canc_echo;if [ "$sim_ou_nao" == "sim" ];then
-                if [ -e "$instaladoresLocal" ];then
+                if [ -e "$instaladoresLocal$1" ];then
                     copia_instalador
-                elif ! [ -e "$instaladoresLocal" ];then
+                elif ! [ -e "$instaladoresLocal$1" ];then
                     echo -e "\e[31mInstalador não encontrado, tente novamente por arquivo com nome\e[0m \e[1;31m$1\e[0m"
                 else
                     erro_arquivos

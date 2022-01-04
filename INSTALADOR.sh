@@ -29,6 +29,7 @@ echo -e "\e[34m9\e[0m -  Instalar Agger"
 echo -e "\e[34m10\e[0m - Alterar nome da maquina"
 echo -e "\e[34m11\e[0m - Configurar Swap File do PC"
 echo -e "\e[34m12\e[0m - Configurar Onedrive"
+echo -e "\e[34m98\e[0m - Copiar todos instaladores para sistema"
 echo -e "\e[34m99\e[0m - Desinstalar Programas"
 
 echo ""
@@ -83,6 +84,9 @@ while true; do
             break;;
         12)
             $scriptsDir/4-onedrive-config.sh
+            break;;
+        98)
+            $scriptsDir/4-CopiarInstaladores.sh
             break;;
         99)
             unset opcao
