@@ -104,7 +104,7 @@ mkdir-if() {
     fi
 }
 
-ln-if{
+ln-if() {
     if [ -e "$1" ] && ! [ -e "$2" ]; then
         sudo ln -s $1 $2
     fi
