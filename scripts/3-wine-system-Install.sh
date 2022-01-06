@@ -16,21 +16,13 @@ fi
 # Dependendencias
 source $scriptsDir/_GeneralFunctions.sh
 
-# Diretórios
-sicoobFolder="/opt/sicoob/"
-wineFolder="/opt/sicoob/wine/"
-# wine32Folder="/opt/sicoob/wine32/"
-instaladoresFolder="/opt/sicoob/instaladores/"
-runFolder="/opt/sicoob/run/"
-instaladoresLocal="$relativeDir/instaladores/"
-
 # Criando diretórios
 echo "Gerando pastas"
-sudo mkdir "$sicoobFolder" 2>> $HOME/Downloads/SicoobInstala.log
-sudo mkdir "$wineFolder" 2>> $HOME/Downloads/SicoobInstala.log
-# sudo mkdir "$wine32Folder" 2>> $HOME/Downloads/SicoobInstala.log
-sudo mkdir "$instaladoresFolder" 2>> $HOME/Downloads/SicoobInstala.log
-sudo mkdir "$runFolder" 2>> $HOME/Downloads/SicoobInstala.log
+mkdir-if $sicoobFolder
+mkdir-if $wineFolder
+mkdir-if $instaladoresFolder
+mkdir-if $runFolder
+# if ! [ -e "$wine32Folder" ]; then          sudo mkdir "$wine32Folder";  fi 
 
 # Gerando diretórios do wine
 echo "Gerando diretórios do wine em $wineFolder"

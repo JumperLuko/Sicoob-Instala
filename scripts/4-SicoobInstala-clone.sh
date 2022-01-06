@@ -1,5 +1,17 @@
 #!/bin/bash
 
+# Verificar caminhos das dependencias
+if [ "$scriptsDir" == "" ] && [ -e "./scripts/" ];then
+    scriptsDir=./scripts
+    relativeDir=.
+elif [ "$scriptsDir" == "" ];then
+    scriptsDir=.
+    relativeDir=..
+fi
+
+# Dependendencias
+source $scriptsDir/_GeneralFunctions.sh
+
 # Criar pasta se não existir
 if ! [ -d "/opt/sicoob" ]; then 
     echo "Criando pasta Sicoob"
@@ -14,8 +26,8 @@ if [ -e "/usr/bin/git" ]; then
     elif [ -d "/opt/sicoob/Sicoob-Instala" ]; then
         (cd /opt/sicoob/Sicoob-Instala && sudo git pull)
     fi
-    if [ -e "/opt/sicoob/Sicoob-Instala/INSTALADOR.sh" ] && ! [ -e "/usr/bin/sicoob-instala" ]; then
-        sudo ln -s /opt/sicoob/Sicoob-Instala/INSTALADOR.sh /usr/bin/sicoob-instala
+    if [ -e "/opt/sicoob/Sicoob-Instala/desktop/run/SicoobInstala.sh" ] && ! [ -e "/usr/bin/sicoob-instala" ]; then
+        sudo ln -s /opt/sicoob/Sicoob-Instala/desktop/run/SicoobInstala.sh /usr/bin/sicoob-instala
     fi
     echo "Fim da Atualização do sicoob instala em /opt/sicoob/Sicoob-Instala"
 else

@@ -87,3 +87,25 @@ reiniciar() {
         echo "Sem reboot"
     fi
 }
+
+# Diretórios
+sicoobFolder="/opt/sicoob/"
+wineFolder="/opt/sicoob/wine/"
+# wine32Folder="/opt/sicoob/wine32/"
+instaladoresFolder="/opt/sicoob/instaladores/"
+runFolder="/opt/sicoob/run/"
+instaladoresLocal="$relativeDir/instaladores/"
+
+# Criando diretórios
+echo "Cria pasta se não existir"
+mkdir-if() {
+    if ! [ -e "$1" ]; then
+        sudo mkdir "$1"
+    fi
+}
+
+ln-if{
+    if [ -e "$1" ] && ! [ -e "$2" ]; then
+        sudo ln -s $1 $2
+    fi
+}
