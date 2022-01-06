@@ -14,6 +14,9 @@ if [ -e "/usr/bin/git" ]; then
     elif [ -d "/opt/sicoob/Sicoob-Instala" ]; then
         (cd /opt/sicoob/Sicoob-Instala && sudo git pull)
     fi
+    if [ -e "/opt/sicoob/Sicoob-Instala/INSTALADOR.sh" ] && ! [ -e "/usr/bin/sicoob-instala" ]; then
+        sudo ln -s /opt/sicoob/Sicoob-Instala/INSTALADOR.sh /usr/bin/sicoob-instala
+    fi
     echo "Fim da Atualização do sicoob instala em /opt/sicoob/Sicoob-Instala"
 else
     echo "Git não instalado, não será possivel atualizar sicoob instala"
