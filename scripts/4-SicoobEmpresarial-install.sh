@@ -19,7 +19,7 @@ echo "Gerando atalhos e icones"
 cp $relativeDir/desktop/run/sicoobnet.sh $HOME/Sicoobnet/
 chmod +x $HOME/Sicoobnet/sicoobnet.sh
 cp $relativeDir/desktop/sicoob-empresarial.desktop $HOME/.local/share/applications/
-sed -i -e "s/someUser/$HOME/" $HOME/.local/share/applications/sicoob-empresarial.desktop
+sed -i -e "s/someUser/$(basename $HOME)/" $HOME/.local/share/applications/sicoob-empresarial.desktop
 # Icones no home do usuário, junto com verificação da existencia das pastas
 if ! [ -e "$HOME/.local/share/icons/hicolor/" ]; then
     mkdir $HOME/.local/share/icons && mkdir $HOME/.local/share/icons/hicolor/
