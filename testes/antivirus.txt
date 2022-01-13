@@ -1,0 +1,34 @@
+https://www.kaspersky.com/small-to-medium-business-security/downloads/endpoint?icid=gl_sup-site_trd_ona_oth__onl_b2b_klsupport_tri-dl____kes___
+
+Version 13.0.0.11247 | Debian | Full package
+https://products.s.kaspersky-labs.com/administrationkit/ksc10/13.0.0.11247/english-INT-6552391/3435383636357c44454c7c31/ksc64_13.0.0-11247_amd64.deb
+
+Version 13.2.0.1511 | Debian | Web console
+https://aes.s.kaspersky-labs.com/administrationkit/ksc10/13.2.0.1511/english-7861381-en/3439313230327c44454c7c31/ksc-web-console-13.2.571.x86_64.deb
+
+Version 11.2.0.4528 | Debian x64 | Network agent
+https://products.s.kaspersky-labs.com/endpoints/keslinux10/11.2.0.4528/multilanguage-11.2.0.4528/3437313131397c44454c7c31/klnagent64_12.0.0-60_amd64.deb
+
+Version 11.2.0.4528 | Debian x64 | Files for Agent remote installation
+https://products.s.kaspersky-labs.com/endpoints/keslinux10/11.2.0.4528/multilanguage-11.2.0.4528/3437313132357c44454c7c31/klnagent-x86_64-12.0.0.60-amd64-deb.tgz
+
+Version 11.2.0.4528 | Debian x64 | Distributive
+https://products.s.kaspersky-labs.com/endpoints/keslinux10/11.2.0.4528/multilanguage-11.2.0.4528/3437313131347c44454c7c31/kesl_11.2.0-4528_amd64.deb
+
+Version 11.2.0.4528 | Debian x64 | Product GUI
+https://products.s.kaspersky-labs.com/endpoints/keslinux10/11.2.0.4528/multilanguage-11.2.1.4528/3437373638347c44454c7c4e554c4c/kesl-gui_11.2.0-4528_amd64.deb
+
+=== Kaspersky Security for Linux Mail Server ===
+
+Version 8.0.3.30 | Debian x64 | Web console
+Version 8.0.3.30 | Ubuntu x64 | Web console
+https://products.s.kaspersky-labs.com/email_gateways/kslms8.0/8.0.3.30/multilanguage-20180514_111251/637b7a9d/klmsui_8.0.3-30_amd64.deb
+
+Version 8.0.3.30 | Debian | Network agent
+Version 8.0.3.30 | Ubuntu | Network agent
+https://products.s.kaspersky-labs.com/email_gateways/kslms8.0/8.0.3.30/multilanguage-20180514_111251/a107ccfe/klnagent_10.1.1-45_i386.deb
+
+Version 8.0.3.30 | Debian | Network agent
+Version 8.0.3.30 | Ubuntu | Network agent
+https://products.s.kaspersky-labs.com/email_gateways/kslms8.0/8.0.3.30/multilanguage-20180514_111251/a107ccfe/klnagent_10.1.1-45_i386.deb
+
