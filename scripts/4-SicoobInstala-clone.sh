@@ -1,15 +1,12 @@
 #!/bin/bash
 
 # Verificar caminhos das dependencias
-if [ $(pwd) == "/opt/sicoob/Sicoob-Instala" ];then
-    scriptsDir=/home/luko/Desktop/Sicoob-Instala/scripts
-    relativeDir=/home/luko/Desktop/Sicoob-Instala
-elif [ "$scriptsDir" == "" ] && [ -e "./scripts/" ];then
-    scriptsDir=./scripts
-    relativeDir=.
+if [ "$scriptsDir" == "" ] && [ $(pwd) == "/opt/sicoob/Sicoob-Instala" ] || [ "$scriptsDir" == "" ] && [ -e "./scripts/" ] || [ -e "./INSTALADOR.SH" ];then
+    scriptsDir=$(pwd)/scripts
+    relativeDir=$(pwd)
 elif [ "$scriptsDir" == "" ];then
-    scriptsDir=.
-    relativeDir=..
+    scriptsDir=$(pwd)
+    relativeDir=$(pwd)/..
 fi
 
 # Dependendencias
