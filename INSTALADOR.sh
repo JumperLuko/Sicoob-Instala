@@ -24,11 +24,12 @@ echo -e "\e[34m4\e[0m -  Instalar SisBR"
 echo -e "\e[34m5\e[0m -  Instalar Gercoop"
 echo -e "\e[34m6\e[0m -  Configurar VNC"
 echo -e "\e[34m7\e[0m -  Instalar Caixa (+java i586)"
-echo -e "\e[34m8\e[0m -  Instalar Sicoob Empresarial (na pasta do usuário)"
+echo -e "\e[34m8\e[0m -  Instalar Sicoob Empresarial (usuário atual)"
 echo -e "\e[34m9\e[0m -  Instalar Agger"
 echo -e "\e[34m10\e[0m - Alterar nome da maquina"
 echo -e "\e[34m11\e[0m - Configurar Swap File do PC"
 echo -e "\e[34m12\e[0m - Configurar Onedrive"
+echo -e "\e[34m13\e[0m - Extensões do Desktop (usuário atual)"
 echo -e "\e[34m97\e[0m - Copiar todos instaladores para sistema"
 echo -e "\e[34m98\e[0m - Atualizar Sicoob Instala"
 echo -e "\e[34m99\e[0m - Desinstalar Programas"
@@ -85,6 +86,9 @@ while true; do
             break;;
         12)
             $scriptsDir/4-onedrive-config.sh
+            break;;
+        13)
+            $scriptsDir/4-extensions-gnome.sh
             break;;
         97)
             $scriptsDir/4-CopiarInstaladores.sh
