@@ -22,8 +22,8 @@ wget -qO - https://keys.anydesk.com/repos/DEB-GPG-KEY | sudo apt-key add -
 sudo sh -c 'echo "deb http://deb.anydesk.com/ all main" > /etc/apt/sources.list.d/anydesk-stable.list'
 
 # TeamViewer
-# wget -O - https://download.teamviewer.com/download/linux/signature/TeamViewer2017.asc | sudo apt-key add -
-# sudo apt-add-repository "deb http://linux.teamviewer.com/deb stable main"
+wget -O - https://download.teamviewer.com/download/linux/signature/TeamViewer2017.asc | sudo apt-key add -
+sudo apt-add-repository "deb http://linux.teamviewer.com/deb stable main"
 
 # Onedrive CLI
 sudo add-apt-repository ppa:yann1ck/onedrive -yn
@@ -41,7 +41,7 @@ sudo apt install google-chrome-stable teams anydesk teamviewer onedrive
 
 # Zoom meeting
 if ! [ -e "$relativeDir/instaladores/zoom_amd64.deb" ]; then
-    wget https://zoom.us/client/latest/zoom_amd64.deb -P $relativeDir/instaladores
+    wget https://zoom.us/client/latest/zoom_amd64.deb -P $relativeDir/instaladores --no-check-certificate
 fi
 sudo gdebi $relativeDir/instaladores/zoom_amd64.deb
 

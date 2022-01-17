@@ -12,6 +12,7 @@ dl.google.com
 packages.microsoft.com
 deb.anydesk.com
 keys.anydesk.com
+ftp.adobe.com
 
 - deb
 download.onlyoffice.com
