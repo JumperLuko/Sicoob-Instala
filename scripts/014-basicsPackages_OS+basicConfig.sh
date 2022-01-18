@@ -72,8 +72,13 @@ fi
 # `pdfarranger` para organizar paginas de PDF
 # `onlyoffice` para suite office
 sudo flatpak install flathub com.github.jeromerobert.pdfarranger org.onlyoffice.desktopeditors -y
+# Permissão par ao OnlyOffice acessar Samba
+sambaPerm="sudo flatpak override --filesystem=xdg-run/gvfs"
+$sambaPerm org.onlyoffice.desktopeditors; $sambaPerm com.github.jeromerobert.pdfarranger
 # Extras porém relevantes
 sudo flatpak install flathub io.bit3.WhatsAppQT org.telegram.desktop com.bitstower.Markets com.github.hugolabe.Wike com.github.gi_lom.dialect org.gabmus.whatip org.gnome.BreakTimer com.belmoussaoui.Decoder com.belmoussaoui.Obfuscate -y
+# Permissões para acessar samba
+$sambaPerm io.bit3.WhatsAppQT; $sambaPerm org.telegram.desktop;
 
 # Flatpak atualizar automáticamente
 # https://www.jwillikers.com/automate-flatpak-updates-with-systemd
