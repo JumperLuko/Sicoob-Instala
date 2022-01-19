@@ -9,6 +9,9 @@ elif [ "$scriptsDir" == "" ];then
     relativeDir=..
 fi
 
+# Dependendencias
+source $scriptsDir/_GeneralFunctions.sh
+
 sudo echo ""
 
 # Criar arquivo com senha vnc + permissão de leitura
@@ -20,6 +23,9 @@ sudo chmod +444 /opt/sicoob/passwdvnc.pwd
 # Iniciar VNC ao iniciar usuário
 echo "Configurando VNC ao iniciar usuário"
 sudo cp $scriptsDir/profile.d/x11vnc-user.sh /etc/profile.d/
+
+# Copiar VNC desktop
+sudo cp $relativeDir/desktop/start-vnc.desktop /usr/share/applications/
 
 # Iniciar com sistema
 #! Arquivo de inicialização não funciona pois o usuário guess está dando erro
