@@ -25,6 +25,9 @@ read
 echo "Copiando arquivo .desktop do Sicoob Instala"
 sudo cp $relativeDir/desktop/Sicoob-Instala.desktop /usr/share/applications/
 
+#! Copiar .desktop restart Gnome
+sudo cp $relativeDir/desktop/restart-gnome.desktop /usr/share/applications/
+
 # Clonar repositório Github
 source $scriptsDir/4-SicoobInstala-clone.sh
 
