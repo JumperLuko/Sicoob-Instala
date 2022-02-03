@@ -32,6 +32,8 @@ sudo add-apt-repository ppa:yann1ck/onedrive -yn
 sudo apt update
 sudo apt install google-chrome-stable teams anydesk teamviewer onedrive
 
+sudo apt-add-repository "deb http://linux.teamviewer.com/deb stable main" --remove
+
 # # OnlyOffice
 # # adiciona via flatpak já
 # if ! [ -e "$relativeDir/instaladores/onlyoffice-desktopeditors_amd64.deb" ]; then
