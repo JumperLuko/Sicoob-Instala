@@ -16,7 +16,7 @@ javaPWD=/opt/jre1.8.0_i586
 
 if ! [ -e "/opt/jre1.8.0_i586" ]; then
     # Download Java i586
-    wget https://javadl.oracle.com/webapps/download/AutoDL?BundleId=245048_d3c52aa6bfa54d3ca74e617f18309292 -O /tmp/jre-8u301-linux-i586.tar.gz
+    wget https://javadl.oracle.com/webapps/download/AutoDL?BundleId=245048_d3c52aa6bfa54d3ca74e617f18309292 -O /tmp/jre-8u301-linux-i586.tar.gz --no-check-certificate
 
     # Extrair em /opt java i586
     # sudo mkdir /opt/jre-i586
