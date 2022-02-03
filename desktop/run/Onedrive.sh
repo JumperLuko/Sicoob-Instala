@@ -7,9 +7,10 @@ TextoOpcoes(){
     echo -e "1- Logar no Onedrive"
     echo -e "2- Deslogar do Onedrive"
     echo -e "3- Executar Onedrive"
-    echo -e "4- Habilitar Onedrive na inicialização"
-    echo -e "5- Desabilitar Onedrive na inicialização"
-    echo -e "6- Configurar Onedrive"
+    echo -e "4- Parar Onedrive"
+    echo -e "5- Habilitar Onedrive na inicialização"
+    echo -e "6- Desabilitar Onedrive na inicialização"
+    echo -e "7- Configurar Onedrive"
 
     read -p "Digite o numero da opção que deseja: " opcao
 }
@@ -33,14 +34,18 @@ while true; do
             echo "Rodando"
             ;;
         4)
+            systemctl --user stop onedrive
+            echo "Rodando"
+            ;;
+        5)
             systemctl --user enable onedrive
             echo "Ativado"
             ;;
-    	5)
+    	6)
             systemctl --user disable onedrive
             echo "Desativado"
             ;;
-        6)
+        7)
             # Copiar arquivo de configuração padrão, se não existir
             if ! [ -e "$HOME/.config/onedrive/config" ]; then 
                 cp /usr/share/doc/onedrive/config ~/.config/onedrive/config
