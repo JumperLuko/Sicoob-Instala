@@ -1,0 +1,43 @@
+=== Como usar ===
+Onde ficam os programas ou o menu iniciar? 
+R: Clique no menu iniciar, o botão Z no canto inferior esquerdo da tela.
+
+Como adiciono um programa a barra inferior?
+1. Vá no menu iniciar
+2. Pesquise por um programa na caixa de texto abaixo
+3. Botão direito do mouse no programa desejado
+4. Clique em adicionar aos favoritos 
+
+Como adiciono um programa ao desktop?
+1. Vá no menu iniciar
+2. Pesquise por um programa na caixa de texto abaixo
+3. Botão direito do mouse no programa desejado
+4. Clique em adicionar a área de trabalho
+
+Como monto um servidor?
+1. Esteja com usuário com permissão de administrador
+2. Procure pelo programa Sicoob Instala
+3. Digite o numero correspondente a opção "Montar Servidor"
+4. Digite as informações requeridas
+	a. IP do servidor
+	b. User: Usuário do AD para login, de alta preferencia um que não troque a senha
+	c. Password: Senha do usuário do AD
+	d. Workgroup: Grupo de trabalho, pode deixar vazio ou colocar "sicoobsmo"
+	e. Folder: Pasta do servidor que será acessada, normalmente é "servidor"
+	f. Digite a senha do usuário atual que tenha administrador
+
+=== O que fazer ===
+add aos favoritos: chrome e teams 
+add ao desktop: SisBr, Gercoop, sipagnet e pdf arranger 
+Configurar: chrome e firefox
+Montar Servidor
+Configurar impressora
+Instalar sipagnet empresarial
+add botão para mostrar area de trabalho
+
+=== O que é ===
+Sicoob Instala
+É o programa pega tarefas configurações dificeis, e simplifica para os processos mais simples e automaticos possiveis.
+Ao abrir o programa irá abrir um terminal com opções do que fazer, cada opção executará um script diferente que fara ajustes e poderá perguntar informações de configurações.
+O objetivo final é que com poucos botões tudo possar ser configurado da maneira mas automatica, facil e agil possivel. Sendo requisitado somente senhas e definições especificas 
+
