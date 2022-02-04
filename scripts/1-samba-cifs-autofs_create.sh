@@ -28,7 +28,7 @@ done
 read -p "User: " user
 read -s -p "Password: " pass
 echo ""
-read -p "workgroup: (empty for without) [common=workgroup]" domain
+read -p "workgroup: (empty for without) [common=workgroup] " domain
 read -p "Folder [default=Servidor] " folder
 
 # Default folder
