@@ -31,6 +31,10 @@ sudo cp $relativeDir/desktop/restart-gnome.desktop /usr/share/applications/
 # Clonar repositório Github
 source $scriptsDir/4-SicoobInstala-clone.sh
 
+# Permiti que usuários coloquem senha do wifi
+sudo cp $criptsDir/localauthority/10-network-manager.pkla /etc/polkit-1/localauthority/50-local.d/
+#service network-manager restart
+
 # Atualizar corretamente os repositórios
 sudo apt update
 sudo apt upgrade -y
