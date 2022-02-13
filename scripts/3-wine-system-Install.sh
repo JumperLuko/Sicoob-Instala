@@ -1,9 +1,5 @@
 #!/bin/bash
 
-# Carimbar arquivo de log
-timestamp=$(date +%Y-%m-%d_%H-%M-%S)
-echo "wine-system-install: $timestamp" >> $HOME/Downloads/SicoobInstala.log
-
 # Verificar caminhos das dependencias
 if [ "$scriptsDir" == "" ] && [ -e "./scripts/" ];then
     scriptsDir=./scripts
@@ -15,6 +11,9 @@ fi
 
 # Dependendencias
 source $scriptsDir/_GeneralFunctions.sh
+
+# Carimbar arquivo de log
+timestamp "wine-system-install: "
 
 # Criando diretórios
 echo "Gerando pastas"

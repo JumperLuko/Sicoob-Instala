@@ -1,9 +1,5 @@
 #!/bin/bash
 
-# Carimbar arquivo de log
-timestamp=$(date +%Y-%m-%d_%H-%M-%S)
-echo "Basic packages OS & basic config: $timestamp" >> $HOME/Downloads/SicoobInstala.log
-
 # Verificar caminhos das dependencias
 if [ "$scriptsDir" == "" ] && [ -e "./scripts/" ];then
     scriptsDir=./scripts
@@ -15,6 +11,9 @@ fi
 
 # Dependendencias
 source $scriptsDir/_GeneralFunctions.sh
+
+# Carimbar arquivo de log
+timestamp "Basic packages OS & basic config: "
 
 #! Tenho achar forma de verificar se o Firewall está bloqueando os repositórios e trocar automáticamente, ou abrir a janela para o administrador mudar os repositórios (e tbm infomar ele o que deve fazer)
 
@@ -59,6 +58,19 @@ source $scriptsDir/4-SicoobInstala-clone.sh
 # Gnome-shell extensions via cli
 sudo pip install --system gnome-extensions-cli
 
+# WineHq atualizado para Ubuntu 20.04 based
+#! Verificar se instalar versão especifica wine instala, e principalmente se rodará as aplicações (verificar especificidade do agger e dotnet452 se rodam no wine 7 x64). Se tudo der certo, remover também os pacotes de instalação de wine 5 logo acima
+#sudo dpkg --add-architecture i386 
+#wget -nc https://dl.winehq.org/wine-builds/winehq.key
+#sudo apt-key add winehq.key
+#sudo add-apt-repository 'deb https://dl.winehq.org/wine-builds/ubuntu/ focal main' -u
+# sudo apt install --install-recommends winehq-stable -y
+#sudo apt install -y winehq-stable=7.0~focal wine-stable=7.0~focal wine-stable-amd64=7.0~focal wine-stable-i386=7.0~focal
+
+# Como fixar versões do wine
+# https://dl.winehq.org/wine-builds/ubuntu/dists/focal/main/binary-amd64/
+# https://forum.winehq.org/viewtopic.php?t=32976
+
 if [ -e "/usr/bin/onedrive" ]; then
     # Copia executavel do Onedrive
     echo "Copiando executavel SH do Onedrive"
@@ -100,13 +112,6 @@ sudo systemctl --system enable --now update-system-flatpaks.timer
 
 # Descomente isto caso queira reinstalar o Desktop
 #sudo apt install zorin-os-standard
-
-# WineHq atualizado para Ubuntu 20.04 based
-# sudo dpkg --add-architecture i386 
-# wget -nc https://dl.winehq.org/wine-builds/winehq.key
-# sudo apt-key add winehq.key
-# sudo add-apt-repository 'deb https://dl.winehq.org/wine-builds/ubuntu/ focal main' -u
-# sudo apt install --install-recommends winehq-stable
 
 # Automatic updates
 # https://www.blackmoreops.com/2021/10/28/how-to-configure-automatic-updates-in-ubuntu-server/

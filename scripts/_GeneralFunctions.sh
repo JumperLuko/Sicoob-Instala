@@ -1,9 +1,11 @@
 #!/bin/bash
 
+logFile="$HOME/.cache/SicoobInstala.log"
+
 timestamp () {
     # Carimbar arquivo de log
     timestampNow=$(date +%Y-%m-%d_%H-%M-%S)
-    echo "$1 $timestampNow" >> $HOME/Downloads/SicoobInstala.log
+    echo "$1 $timestampNow" >> $logFile
 }
 
 # Mostrar sim ou não para funções
