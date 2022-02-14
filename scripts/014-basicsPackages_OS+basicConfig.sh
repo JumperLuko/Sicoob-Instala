@@ -50,7 +50,7 @@ sudo apt upgrade -y
 # `gdebi` para instala pacotes deb
 # `ntpdate` ferramenta para verificar se o horário do PC está sincronizado com a internet
 # `menulibre` Para icones no sistema funcionarem. !Algo sem isso não está deixando os icones funcionarem
-sudo apt install sssd-ad sssd-tools realmd adcli samba smbclient wine wine64 wine32:i386 winetricks mono-dbg x11vnc git git-gui libxtst6:i386 icedtea-netx openssh-server unattended-upgrades gdebi ntpdate ttf-mscorefonts-installer winbind menulibre chrome-gnome-shell pip autofs cifs-utils pwgen kdialog
+sudo apt install sssd-ad sssd-tools realmd adcli samba smbclient x11vnc git git-gui libxtst6:i386 icedtea-netx openssh-server unattended-upgrades gdebi ntpdate ttf-mscorefonts-installer winbind menulibre chrome-gnome-shell pip autofs cifs-utils pwgen kdialog -y
 
 # Clonar repositório Github, novamente caso o pacote não tenha sido instalado antes
 source $scriptsDir/4-SicoobInstala-clone.sh
@@ -60,12 +60,11 @@ sudo pip install --system gnome-extensions-cli
 
 # WineHq atualizado para Ubuntu 20.04 based
 #! Verificar se instalar versão especifica wine instala, e principalmente se rodará as aplicações (verificar especificidade do agger e dotnet452 se rodam no wine 7 x64). Se tudo der certo, remover também os pacotes de instalação de wine 5 logo acima
-#sudo dpkg --add-architecture i386 
-#wget -nc https://dl.winehq.org/wine-builds/winehq.key
-#sudo apt-key add winehq.key
-#sudo add-apt-repository 'deb https://dl.winehq.org/wine-builds/ubuntu/ focal main' -u
-# sudo apt install --install-recommends winehq-stable -y
-#sudo apt install -y winehq-stable=7.0~focal wine-stable=7.0~focal wine-stable-amd64=7.0~focal wine-stable-i386=7.0~focal
+sudo dpkg --add-architecture i386 
+wget -nc https://dl.winehq.org/wine-builds/winehq.key
+sudo apt-key add winehq.key
+sudo add-apt-repository 'deb https://dl.winehq.org/wine-builds/ubuntu/ focal main' -u
+sudo apt install -y winehq-stable=7.0.0.0~focal-1 wine-stable=7.0.0.0~focal-1 wine-stable-amd64=7.0.0.0~focal-1 wine-stable-i386=7.0.0.0~focal-1 winetricks mono-dbg
 
 # Como fixar versões do wine
 # https://dl.winehq.org/wine-builds/ubuntu/dists/focal/main/binary-amd64/
