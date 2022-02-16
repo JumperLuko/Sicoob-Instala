@@ -1,7 +1,14 @@
 #!/bin/bash
 
+# Utiliza wine-devel mais atualizado, senão utiliza a versão mais antiga do sistema 
+if [ -e "/opt/wine-devel/bin/wine" ]; then
+    wine_devel=/opt/wine-devel/bin/wine
+else
+    wine_devel=/usr/bin/wine
+fi
+
 homeGercoop="$home.local/share/gercoop/"
-runGercoop(){ (cd "$homeGercoop"; wine "/opt/sicoob/wine/drive_c/GerCoop/GerCoop.exe") }
+runGercoop(){ (cd "$homeGercoop"; $wine_devel "/opt/sicoob/wine/drive_c/GerCoop/GerCoop.exe") }
 
 # Executa na pasta do Gercoop, se não houve, criará
 if [ -d "$homeGercoop" ]; then
