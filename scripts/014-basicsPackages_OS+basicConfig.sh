@@ -50,7 +50,7 @@ sudo apt upgrade -y
 # `gdebi` para instala pacotes deb
 # `ntpdate` ferramenta para verificar se o horário do PC está sincronizado com a internet
 # `menulibre` Para icones no sistema funcionarem. !Algo sem isso não está deixando os icones funcionarem
-sudo apt install sssd-ad sssd-tools realmd adcli samba smbclient x11vnc git git-gui libxtst6:i386 icedtea-netx openssh-server unattended-upgrades gdebi ntpdate ttf-mscorefonts-installer winbind menulibre chrome-gnome-shell pip autofs cifs-utils pwgen dialog kdialog -y
+sudo apt install sssd-ad sssd-tools realmd adcli wine wine64 wine32:i386 winetricks mono-dbg samba smbclient x11vnc git git-gui libxtst6:i386 icedtea-netx openssh-server unattended-upgrades gdebi ntpdate ttf-mscorefonts-installer winbind menulibre chrome-gnome-shell pip autofs cifs-utils pwgen dialog kdialog -y
 
 # Clonar repositório Github, novamente caso o pacote não tenha sido instalado antes
 source $scriptsDir/4-SicoobInstala-clone.sh
@@ -64,7 +64,7 @@ sudo dpkg --add-architecture i386
 wget -nc https://dl.winehq.org/wine-builds/winehq.key
 sudo apt-key add winehq.key
 sudo add-apt-repository 'deb https://dl.winehq.org/wine-builds/ubuntu/ focal main' -u
-sudo apt install -y winehq-devel=7.2~focal-1 wine-devel=7.2~focal-1 wine-devel-amd64=7.2~focal-1 wine-devel-i386=7.2~focal-1 winetricks mono-dbg
+sudo apt install -y wine-devel=7.2~focal-1 wine-devel-amd64=7.2~focal-1 wine-devel-i386=7.2~focal-1
 
 # Como fixar versões do wine
 # https://dl.winehq.org/wine-builds/ubuntu/dists/focal/main/binary-amd64/

@@ -4,6 +4,7 @@
 
 adobeAIR=AdobeAIRInstaller.exe
 instaladorPasta="/opt/sicoob/instaladores"
+# wineRun=/opt/wine-devel/bin/wine
 
 # Verifica se há instalador do adobeAIR e se não está instalado, então ele abre o instalador
 if [ -e "$instaladorPasta"/"$adobeAIR" ] && ! [ -e ".wine/drive_c/Program Files (x86)/Adobe/Flash Player/AddIns/airappinstaller/airappinstaller.exe" ]; then
