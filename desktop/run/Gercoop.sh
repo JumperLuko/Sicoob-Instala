@@ -7,8 +7,9 @@ else
     wine_devel=/usr/bin/wine
 fi
 
-homeGercoop="$home.local/share/gercoop/"
-runGercoop(){ (cd "$homeGercoop"; $wine_devel "/opt/sicoob/wine/drive_c/GerCoop/GerCoop.exe") }
+wine64Folder="$HOME/.wine64/"
+homeGercoop="$HOME/.local/share/gercoop/"
+runGercoop(){ (cd "$homeGercoop"; env WINEPREFIX="$wine64Folder" $wine_devel "/opt/sicoob/wine/drive_c/GerCoop/GerCoop.exe") }
 
 # Executa na pasta do Gercoop, se não houve, criará
 if [ -d "$homeGercoop" ]; then
