@@ -64,7 +64,7 @@ sudo dpkg --add-architecture i386
 wget -nc https://dl.winehq.org/wine-builds/winehq.key
 sudo apt-key add winehq.key
 sudo add-apt-repository 'deb https://dl.winehq.org/wine-builds/ubuntu/ focal main' -u
-sudo apt install -y winehq-stable=7.0.0.0~focal-1 wine-stable=7.0.0.0~focal-1 wine-stable-amd64=7.0.0.0~focal-1 wine-stable-i386=7.0.0.0~focal-1 winetricks mono-dbg
+sudo apt install -y winehq-devel=7.2~focal-1 wine-devel=7.2~focal-1 wine-devel-amd64=7.2~focal-1 wine-devel-i386=7.2~focal-1 winetricks mono-dbg
 
 # Como fixar versões do wine
 # https://dl.winehq.org/wine-builds/ubuntu/dists/focal/main/binary-amd64/
