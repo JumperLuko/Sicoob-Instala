@@ -7,7 +7,7 @@ else
     wine_devel=/usr/bin/wine
 fi
 
-wine64Folder="$HOME/.wine64/"
+wine64Folder="$HOME/.wine/"
 homeGercoop="$HOME/.local/share/gercoop/"
 runGercoop(){ (cd "$homeGercoop"; env WINEPREFIX="$wine64Folder" $wine_devel "/opt/sicoob/wine/drive_c/GerCoop/GerCoop.exe") }
 

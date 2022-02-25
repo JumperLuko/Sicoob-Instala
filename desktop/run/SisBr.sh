@@ -4,7 +4,7 @@
 
 adobeAIR=AdobeAIRInstaller.exe
 instaladorPasta="/opt/sicoob/instaladores"
-wine64Folder="$HOME/.wine64/"
+wine64Folder="$HOME/.wine/"
 # Utiliza wine-devel mais atualizado, senão utiliza a versão mais antiga do sistema 
 if [ -e "/opt/wine-devel/bin/wine" ]; then
     wine_devel=/opt/wine-devel/bin/wine
